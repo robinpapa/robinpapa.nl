@@ -1,0 +1,57 @@
+
+
+/* The skills bar */
+.legenda {
+    margin:0 0 0 52px;
+    float: left;
+
+}
+
+.legendlist li{
+    font-style: italic;
+}
+
+.skillbar {
+    float: right;
+    bottom: 0px;
+    margin: 0 4em;
+}
+
+.verticalbars li {
+    /*margin-right: 48px;*/
+    position: relative;
+    display: inline-block;
+    margin-right: 72px;
+    height: 48px;
+    width: 5px;
+    background: rgba(5,5,5,.6);
+    text-indent: -9999px;
+    /*-moz-border-radius: 2px 2px 0 0;*/
+    /*-webkit-border-radius: 2px 2px 0 0;*/
+    border-radius: 12px; /* future proofing */
+    /*-khtml-border-radius: 2px; /* for old Konqueror browsers */*/
+}
+
+.verticalbars .novice { height: 12px; top: 36px}
+.verticalbars .proficient { height: 24px; top: 24px;}
+.verticalbars .advanced { height: 36px; top: 12px;}
+.verticalbars .expert { height: 48px; }
+
+.horizontalbar {
+    margin: 4px 0;
+    display: flex;
+}
+
+.horizontalbar li{
+    /*text-transform: uppercase;*/
+    font-size: 10px;
+    line-height: 14px;
+    text-align: center;
+    width: 100%;
+}
+
+.business {background: #76C5FF}
+.programming {background: #31A9FF}
+.frontend {background: #76C5FF}
+.design {background: #31A9FF}
+.additional {background: #76C5FF}
