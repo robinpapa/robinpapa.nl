@@ -22,12 +22,17 @@ article {
     padding-top: 44px;
 }
 
+.newline {
+    display: block;
+}
 
 /* Text Sizes */
 aside, aside ul li, footer, footer ul li {
     font-size: 12px;
     line-height: 20px;
 }
+
+
 
 /* Enter Page */
 
@@ -208,6 +213,11 @@ a:hover {
 }
 
 .avatar {
-    width: 164px;
-    height: 164px;
+    /*min-width: 164px;*/
+    /*min-height: 164px;*/
+    /*max-width: 164px;*/
+    /*max-height: 164px;*/
+    /*position: relative;*/
+    /*overflow: hidden;*/
+
 }
