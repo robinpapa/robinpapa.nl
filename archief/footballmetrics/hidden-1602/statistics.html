@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Statistics &mdash; FootballMetrics</title>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <!-- Ionicons -->
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+    <!-- Theme style -->
+    <link href="../../dist/css/style.css" rel="stylesheet" type="text/css" />
+    <!-- AdminLTE Skins. Choose a skin from the css/skins 
+         folder instead of downloading all of them to reduce the load. -->
+<!--    <link href="../../dist/css/skins/skin-black.min.css" rel="stylesheet" type="text/css" />-->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="appbody">
+    <!-- Site wrapper -->
+    <div class="wrapper">
+      
+            <!-- =============================================== -->
+
+        
+        <!-- header logo: style can be found in header.less -->
+      <header class="main-header">
+     
+        <a href="index.html" class="logo"><h1>
+          <!-- Add the class icon to your logo image or logo icon to add the margining -->
+          FootballMetrics <sup>&alpha;</sup></h1>
+        </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top" role="navigation">
+          <!-- Sidebar toggle button-->
+          
+          <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+              
+              <!-- Notifications: style can be found in dropdown.less -->
+              <li class="dropdown notifications-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <i class="fa fa-bell-o"></i>
+                  <span class="label bg-red">1</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li class="header">You have 1 new notification</li>
+                  <li>
+                    <!-- inner menu: contains the actual data -->
+                    <ul class="menu">
+                      <li>
+                        <a href="#">
+                          <i class="ion ion-ios-football bg-red"></i> Bets (week 18) have been added
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="footer"><a href="#">View all</a></li>
+                </ul>
+              </li>
+              
+              <!-- User Account: style can be found in dropdown.less -->
+              <li class="dropdown user user-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <img src="../../dist/img/avatar1.jpg" class="user-image" alt="User Image"/>
+                  <span class="hidden-xs">Guest User</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <!-- User image -->
+                  <li class="user-header">
+                    <img src="../../dist/img/avatar1.jpg" class="img-circle" alt="User Image" />
+                    <p>
+                      Guest User
+                      <small>Thanks for being a member!</small>
+                    </p>
+                  </li>
+                  <!-- Menu Body -->
+<!--
+                  <li class="user-body">
+                    <div class="col-xs-4 text-center">
+                      <a href="#">Followers</a>
+                    </div>
+                    <div class="col-xs-4 text-center">
+                      <a href="#">Sales</a>
+                    </div>
+                    <div class="col-xs-4 text-center">
+                      <a href="#">Friends</a>
+                    </div>
+                  </li>
+-->
+                  <!-- Menu Footer-->
+<!--
+                  <li class="user-footer">
+                    <div class="pull-left">
+                      <a href="#" class="btn btn-default btn-flat">Profile</a>
+                    </div>
+                    <div class="pull-right">
+                      <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                    </div>
+                  </li>
+-->
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+          
+          
+
+      <!-- Left side column. contains the sidebar -->
+      <aside class="main-sidebar">
+        <!-- sidebar: style can be found in sidebar.less -->
+          
+<!--
+          <section class="togglenav">
+           <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+              <h4>navigation</h4>
+          </section>
+          
+-->
+        <section class="sidebar">
+            
+          <!-- Sidebar user panel -->
+          <div class="user-panel">
+            <div class="pull-left image">
+              <img src="../../dist/img/avatar1.jpg" class="img-circle" alt="User Image" />
+            </div>
+            <div class="pull-left info">
+              <p>Thanks for visiting,<br/>
+              <span>Guest User</span>!</p>
+
+
+            </div>
+          </div>
+          <!-- search form
+          <form action="#" method="get" class="sidebar-form">
+            <div class="input-group">
+              <input type="text" name="q" class="form-control" placeholder="Search..."/>
+              <span class="input-group-btn">
+                <button type='submit' name='seach' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
+              </span>
+            </div>
+          </form>
+          /.search form -->
+          <!-- sidebar menu: : style can be found in sidebar.less -->
+          <ul class="sidebar-menu">
+            <li class="header">MAIN STATISTICS</li>  
+            
+            <li>
+              <a href="index.html">
+                <i class="fa fa-futbol-o"></i> <span>Current Matches</span>
+                <small class="label pull-right bg-red">19</small>
+              </a>
+            </li>
+            <li>
+              <a href="history-week17.html">
+                <i class="fa fa-history"></i> <span>Match History</span>
+              </a>
+            </li>
+              
+              <li class="header">DOCS &AMP; STATS</li>
+      
+            
+            <li class="active">
+              <a href="statistics.html">
+                <i class="fa fa-line-chart"></i> <span>Statistics</span>
+                                   
+              </a>
+            </li>
+            <li class="fadeout">
+              <a href="#">
+                <i class="fa fa-graduation-cap"></i> <span>University</span>
+                  <small class="label pull-right bg-red">COMING SOON!</small>
+              </a>
+            </li>
+              
+              
+            
+            <li class="header">SUPPORT &amp; MORE</li>
+            
+                 <li class="treeview fadeout">
+              <a href="#">
+<!--                <i class="fa fa-support"></i>-->
+                  <i class="fa fa-user"></i> <span>Your Account </span>
+                    <small class="label pull-right bg-red">COMING SOON!</small>
+<!--                <i class="fa fa-angle-left pull-right"></i>-->
+              </a>
+              <ul class="treeview-menu">
+<!--
+                <li><a href="#"><i class="fa fa-dashboard"></i> Subscription Status</a></li>
+                <li><a href="#"><i class="fa fa-refresh"></i> Renew Subscription</a></li>
+                  <li><a href="#"><i class="fa fa-credit-card"></i> Past Invoices</a></li>
+                  <li><a href="#"><i class="fa fa-dollar"></i> Referral Program</a></li>
+-->
+              </ul>
+            </li>
+              
+              <li class="treeview fadeout">
+              <a href="#">
+<!--                <i class="fa fa-support"></i>-->
+                  <i class="fa fa-support"></i> <span>Need Help? </span>
+                                      <small class="label pull-right bg-red">COMING SOON!</small>
+
+<!--                <i class="fa fa-angle-left pull-right"></i>-->
+              </a>
+              <ul class="treeview-menu">
+<!--
+                <li><a href="#"><i class="fa fa-circle-o text-green"></i> Live Chat Available </a></li>
+                <li><a href="#"><i class="fa fa-question-circle"></i> Frequently Asked Questions</a></li>
+-->
+              </ul>
+            </li>
+              <li class="treeview fadeout">
+              <a href="#">
+                <i class="fa fa-group"></i> <span>About Us</span>
+                                      <small class="label pull-right bg-red">COMING SOON!</small>
+
+<!--                <i class="fa fa-angle-left pull-right"></i>-->
+              </a>
+              <ul class="treeview-menu">
+<!--
+                <li><a href="#"><i class="fa fa-angle-double-right"></i> Level One</a></li>
+               
+                <li><a href="#"><i class="fa fa-angle-double-right"></i> Level One</a></li>
+-->
+              </ul>
+            </li>
+              
+          </ul>
+        </section>
+        <!-- /.sidebar -->
+      </aside>
+
+  
+
+      <!-- =============================================== -->
+        
+        
+      <!-- Right side column. Contains the navbar and content of the page -->
+      <div class="content-wrapper">
+          
+          
+          
+          
+          
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+                    <ol class="breadcrumb">
+            <li class="active">Main Statistics</li>
+            <li class="active">Current Matches</li>
+          </ol>
+            <h1>
+            Statistics
+            <small>Model Results over 2014</small>
+          </h1>
+
+        </section>
+          
+            
+
+        <!-- Main content -->
+        <section class="content">
+            
+             <div class="row">
+            <div class="col-xs-12">
+                <div class="box box-danger">
+                                <div class="box-header">
+                                    <i class="fa fa-info"></i>
+                                    <h3 class="box-title">These statistics show a methodically robust backtest of the results over 2014.</h3>
+                                </div><!-- /.box-header -->
+                                <div class="box-body">
+                                        Below you will find FootballMetrics' results of 2014. The computer-generated probabilities have been backtested extensively and we show you how the model performed on the 2014 season for the English Premier League, the Spanish La Liga and the German Bundesliga. All results are based on average odds which are obtained minutes before the start of a match. While it is certainly possible to find more favourable odds, we do <i>not</i> want to overestimate our results using unrealistically high odds. Nevertheless, if you manage to find higher odds, you could earn an even larger profit.
+                         </div><!-- /.box-body -->
+                            </div>
+                 </div>
+          </div>
+             <!-- Small boxes (Stat box) -->
+           <div class="row">
+                             
+               <div class="col-lg-3 col-xs-6">
+              <!-- small box -->
+              <div class="small-box bg-red">
+                <div class="inner">
+                    <small><i>Calendar Year 2014</i></small>
+                  <h3>
+                    18.4<sup style="font-size: 20px">%</sup>
+                  </h3>
+                  <p>
+                      Weekly Return on Investment 
+                  </p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-cash"></i>
+                </div>
+<!--
+                <a href="#" class="small-box-footer">
+                  More info <i class="fa fa-arrow-circle-right"></i>
+                </a>
+-->
+              </div>
+            </div><!-- ./col -->
+            <div class="col-lg-3 col-xs-6">
+              <!-- small box -->
+              <div class="small-box bg-red">
+                <div class="inner">
+                    <small><i>Calendar Year 2014</i></small>
+                  <h3>
+                      5693/4810
+                  </h3>
+                  <p>
+                      Returned/Wagered Units
+                  </p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-ios-timer"></i>
+                </div>
+<!--
+                <a href="#" class="small-box-footer">
+                  More info <i class="fa fa-arrow-circle-right"></i>
+                </a>
+-->
+              </div>
+            </div><!-- ./col -->
+            <div class="col-lg-3 col-xs-6">
+              <!-- small box -->
+              <div class="small-box bg-red">
+                <div class="inner">
+                    <small><i>Calendar Year 2014</i></small>
+                    <h3>
+                    43.5<sup style="font-size: 20px">%</sup>
+                  </h3>
+                  <p>
+                    Winning Bets
+                  </p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-ios-football"></i>
+                </div>
+<!--
+                <a href="#" class="small-box-footer">
+                  More info <i class="fa fa-arrow-circle-right"></i>
+                </a>
+-->
+              </div>
+            </div><!-- ./col -->
+            <div class="col-lg-3 col-xs-6">
+              <!-- small box -->
+              <div class="small-box bg-red">
+                <div class="inner">
+                    <small><i>Calendar Year 2014</i></small>
+                    <h3>
+                    481/1054
+                  </h3>
+                  <p>
+                    Bets Selected From Matches
+                  </p>
+                </div>
+                <div class="icon">
+                  <i class="ion ion-pie-graph"></i>
+                </div>
+<!--
+                <a href="#" class="small-box-footer">
+                  More info <i class="fa fa-arrow-circle-right"></i>
+                </a>
+-->
+            </div><!-- ./col -->
+               </div> <!-- .row -->
+           
+          </div><!-- /.row -->
+            
+            <div class="row">
+            <div class="col-md-8">
+              <div class="nav-tabs-custom">
+                  
+                  
+                  
+<!--
+                  <ul class="nav nav-tabs pull-right ui-sortable-handle">
+                  <li class=""><a href="#revenue-chart" data-toggle="tab" aria-expanded="false">Area</a></li>
+                  <li class="active"><a href="#sales-chart" data-toggle="tab" aria-expanded="true">Donut</a></li>
+                  <li class="pull-left header"><i class="fa fa-inbox"></i> Sales</li>
+                </ul>
+                  
+                  
+-->
+                  <ul class="nav nav-tabs pull-right ui-sortable-handle">
+                                                              <li><a href="#monthly" data-toggle="tab">Monthly</a></li>
+
+                <li class="active"><a href="#weekly" data-toggle="tab">Weekly</a></li>
+
+                <li class="pull-left header"><i class="fa fa-line-chart"></i> Profit Trend in 2014</li>
+
+                </ul>
+<div class="tab-content-stats">
+
+  <div class="tab-pane active" id="weekly">
+      <div class="label-y"><i class="ion ion-arrow-up-c"></i> Profit in Units</div>
+    <div id="line-chart" style="height: 300px;">            </div>
+            <div class="label-x">Week Number <i class="ion ion-arrow-right-c"></i></div>
+
+</div>
+  <div class="tab-pane" id="monthly">
+<div class="label-y"><i class="ion ion-arrow-up-c"></i> Profit in Units</div>
+      <div id="line-chart2" style="height: 300px;"></div>  <div class="label-x">Month Number <i class="ion ion-arrow-right-c"></i></div>
+    </div><!-- /#ion-icons -->
+
+                </div><!-- /.tab-content -->
+              </div><!-- /.nav-tabs-custom -->
+            </div><!-- /.col -->
+                
+                <div class="col-md-4">
+                <div class="box box-info">
+                <div class="box-header">
+                  <h3 class="box-title"><i class="ion ion-arrow-left-c"></i> Profit Trend</h3>
+                  <div class="box-tools pull-right">
+                    <div class="label bg-aqua">Information</div>
+                  </div>
+                </div>
+                <div class="box-body">
+                  <p>
+                  This graph shows the models' profit trend over 2014. It shows the profits of a fixed stake betting strategy, in which 10 units are staked on each bet.
+                      </p><p>
+Every data point is a week of bets, where the first week starts at January 1 and week 37 ends on December 29. Weeks in which no football was played are not shown. The red line displays the mean of the profits per week. A larger average dispersion between this
+mean line and the trend line is undesirable since this will mean large up and down swings in profits.</p>
+                    <p>On the second tab, the profit trend per month is displayed.</p>
+
+                  </p>
+                </div><!-- /.box-body -->
+                
+              </div>
+                </div>
+                
+          </div><!-- /.row -->       
+          
+          <div class="row">
+              
+              
+               <div class="col-md-4">
+                <div class="box box-info">
+                <div class="box-header">
+                    <div class="box-tools">
+                    <div class="label bg-aqua">Information</div>
+                  </div>
+                  <h3 class="box-title"> Weekly Profit<i class="ion ion-arrow-right-c"></i></h3>
+                  
+                </div>
+                <div class="box-body">
+                  <p>
+                  On the right the weekly profits in units of 10 and in return on investment (ROI) over 2014 are shown.</p>
+<p>The graph shows that a profit has not been achieved in every week. However the majority of weeks were positive and together they more than outweigh the negative weeks.</p>
+<p>Every league on its own has a positive average return on investment. Nevertherless, it is inevitable that each league will face a negative week from time to time. By wagering your money on multiple leagues the number of total negative weeks shrinks, since bad luck in one league can be offset by good luck in another. Once we add more leagues to the model, it's expected that the number of negative weeks is reduced even more!</p>                    
+                
+
+                  </p>
+                </div><!-- /.box-body -->
+              
+              </div>
+                </div>
+              
+            <div class="col-md-8">
+              <div class="nav-tabs-custom">
+                  
+                  
+                  
+<!--
+                  <ul class="nav nav-tabs pull-right ui-sortable-handle">
+                  <li class=""><a href="#revenue-chart" data-toggle="tab" aria-expanded="false">Area</a></li>
+                  <li class="active"><a href="#sales-chart" data-toggle="tab" aria-expanded="true">Donut</a></li>
+                  <li class="pull-left header"><i class="fa fa-inbox"></i> Sales</li>
+                </ul>
+                  
+                  
+-->
+                  <ul class="nav nav-tabs pull-right ui-sortable-handle">
+                  <li><a href="#ROI" data-toggle="tab">ROI</a></li>
+                <li class="active"><a href="#UNITS" data-toggle="tab">Units</a></li>
+                <li class="pull-left header"><i class="fa fa-bar-chart"></i> Weekly Profit in 2014</li>
+
+                </ul>
+                <div class="tab-content-stats">
+                  <!-- Font Awesome icons -->
+                  <div class="tab-pane active" id="UNITS" >
+                    <div class="label-y"><i class="ion ion-arrow-up-c"></i> Profit/Loss in Units</div>  <div id="bar-chart" style="height: 300px;"></div><div class="label-x">Week Number <i class="ion ion-arrow-right-c"></i></div>
+                  </div><!-- /#UNITS -->
+                  <!-- glyphicons-->
+                  <div class="tab-pane" id="ROI">
+              <div class="label-y"><i class="ion ion-arrow-up-c"></i> Profit/Loss in Return on Investment (%)</div>    <div id="bar-chart2" style="height: 300px;"></div><div class="label-x">Week Number <i class="ion ion-arrow-right-c"></i></div>
+                   </div><!-- /#ion-icons -->
+
+                </div><!-- /.tab-content -->
+              </div><!-- /.nav-tabs-custom -->
+            </div><!-- /.col -->
+                
+               
+                
+          </div><!-- /.row -->    
+        
+             
+            <div class="row">
+            <div class="col-md-8">
+             <div class="box" style="border-top: 0;">
+                <div class="box-header">
+                  <h3 class="box-title header"><i class="fa fa-pie-chart"></i> Profit Share per League in 2014</h3>
+                 
+                </div>
+                <div class="box-body">
+                   
+                  <!-- Font Awesome icons -->
+                     <div class="pie-information">
+                        <ul class="init">
+                            <li class="header">Click on Graph</li>
+                            <li># Bets:</li>
+                            <li>% ROI:</li>
+                            <li>Profit:</li>
+                         </ul>
+                         
+                         <ul class="EPL">
+                             <li class="header">Premier League</li>
+                            <li># Bets:<span>152</span></li>
+                            <li>% ROI:<span>21.5</span></li>
+                            <li>Profit:<span>327.4</span></li>
+                         </ul>
+                         <ul class="BDL">
+                             <li class="header">Bundesliga</li>
+                            <li># Bets:<span>120</span></li>
+                            <li>% ROI:<span>26.3</span></li>
+                            <li>Profit:<span>316.1</span></li>
+                         </ul>
+                           </ul>
+                         <ul class="LIGA">
+                             <li class="header">La Liga</li>
+                            <li># Bets:<span>209</span></li>
+                            <li>% ROI:<span>11.4</span></li>
+                            <li>Profit:<span>239.2</span></li>
+                         </ul>
+
+                         </div>
+                  <div id="pie-chart" style="height: 300px; width: 600px;"></div>
+             
+
+                </div><!-- /.box-body -->
+
+              </div>      
+                  
+  
+               
+
+
+
+
+            </div><!-- /.col -->
+                
+                <div class="col-md-4">
+                <div class="box box-info">
+                <div class="box-header">
+                  <h3 class="box-title"><i class="ion ion-arrow-left-c"></i> Profit Share per League</h3>
+                  <div class="box-tools pull-right">
+                    <div class="label bg-aqua">Information</div>
+                  </div>
+                </div>
+                <div class="box-body">
+                  <p>
+        This graph shows the distribution of profits over different football leagues. The total wagered units and ROI for each league appear when you click on the specific league. Spreading your total wagered amount over a larger number of games reduces the variance of your returns, hence creating a more stable stream of profits. </p><p>We have incorporated multiple leagues in the model to be able to select the most profitable bets and still bet on a large number of games. As mentioned before, we are working hard to implement more leagues. Please <a href="mailto:mail@robinpapa.nl?Subject=Hey%2C%20just%20some%20feedback%20about%20footballmetrics...&Body=Hey%21%0A%0AI%20just%20want%20to%20say...%0A%0A%0ARegards%21">let us know</a> which are your favorite leagues to be added to the system!
+
+                  </p>
+                </div><!-- /.box-body -->
+              
+              </div>
+                </div>
+                
+          </div><!-- /.row -->   
+          
+        </section><!-- /.content -->
+          
+      </div><!-- /.content-wrapper -->
+ <footer class="main-footer">
+        <div class="pull-right hidden-xs">
+         <a href="terms.html">Terms</a> / <a class="typeform-share link" href="https://robinpapa.typeform.com/to/g9rafz" data-mode="1" target="_blank">Feedback</a> <script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'share.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}})()</script>
+          </div>
+     <div class="centered">made with <i class="ion ion-ios-heart"></i> in <a href="https://goo.gl/maps/ye0XJ"><strong>Leeuwarden</strong></a></div>
+      </footer>
+      
+    </div><!-- ./wrapper -->
+      
+     
+     
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js" type="text/javascript"></script>
+   
+    <!-- FLOT CHARTS -->
+    <script src="../../dist/plugins/flot/jquery.flot.min.js" type="text/javascript"></script>
+    
+    <!-- FLOT PIE PLUGIN - also used to draw donut charts -->
+    <script src="../../dist/plugins/flot/jquery.flot.pie.min.js" type="text/javascript"></script>
+    <!-- FLOT CATEGORIES PLUGIN - Used to draw bar charts -->
+    <script src="../../dist/plugins/flot/jquery.flot.categories.min.js" type="text/javascript"></script>
+<!-- FLOT RESIZE PLUGIN - allows the chart to redraw when the window is resized -->
+    <script src="../../dist/plugins/flot/jquery.flot.resize.min.js" type="text/javascript"></script>
+
+    <!-- Page script -->
+    <script type="text/javascript">
+
+    $( document ).ready(function() {
+
+        /*
+         * Weekly CHART: Profit
+         * ----------
+         */
+
+        var sin = [
+            [1, -41.1],
+            [2, -5.4],
+            [3, -15.3],
+            [4, 126.9],
+            [5, 59.0],
+            [6, 179.2],
+            [7, 201.0],
+            [8, 319.1],
+            [9, 274.3],
+            [10, 292.7],
+            [11, 303.7],
+            [12, 336.2],
+            [13, 480.6],
+            [14, 571.9],
+            [15, 571.6],
+            [16, 560.3],
+            [17, 548.6],
+            [18, 550.4],
+            [19, 480.9],
+            [20, 543.1],
+            [21, 467.1],
+            [22, 517.7],
+            [23, 471.6],
+            [24, 467.5],
+            [25, 587.5],
+            [26, 621.5],
+            [27, 581.7],
+            [28, 582.9],
+            [29, 616.0],
+            [30, 706.8],
+            [31, 693.8],
+            [32, 758.7],
+            [33, 910.3],
+            [34, 857.6],
+            [35, 892.5],
+            [36, 904.8],
+            [37, 882.7]
+        ]
+        
+        var cos = [
+            [1, -41.1],
+            [37, 882.7]
+        ]
+        
+        var line_data1 = {
+          data: sin,
+          color: "#3c8dbc",
+          label: "Total Profit",
+            lines: { fill: true }
+        };
+         var line_data2 = {
+          data: cos,
+          color: "#f56954",
+          label: "Total Profit",
+        lines: { fill: false }
+        };
+ 
+        $.plot("#line-chart", [line_data1, line_data2], {
+          grid: {
+            hoverable: true,
+            borderColor: "#f3f3f3",
+            borderWidth: 1,
+            tickColor: "#f3f3f3"
+          },
+          series: {
+            shadowSize: 0,
+            lines: {
+              show: true,
+            },
+            points: {
+              show: true,
+            }
+          },
+            legend: {show: false},
+
+          lines: {
+            color: ["#3c8dbc", "#f56954"]
+          },
+          yaxis: {
+            show: true,
+              
+          },
+          xaxis: {
+            show: true
+          }
+        });
+        //Initialize tooltip on hover
+        $("<div class='tooltip-inner' id='line-chart-tooltip'></div>").css({
+          position: "absolute",
+          display: "none",
+          opacity: 0.8
+        }).appendTo("body");
+        $("#line-chart").bind("plothover", function (event, pos, item) {
+
+          if (item) {
+            var x = item.datapoint[0].toFixed(0),
+                    y = item.datapoint[1].toFixed(0);
+
+            $("#line-chart-tooltip").html(item.series.label + " in wk" + x + " = " + y + " units")
+                    .css({top: item.pageY + 5, left: item.pageX + 5})
+                    .fadeIn(200);
+          } else {
+            $("#line-chart-tooltip").hide();
+          }
+            
+        });
+        /* END LINE CHART */
+
+       /*
+         * Monthly Chart
+         * ----------
+         */
+        //LINE randomly generated data
+
+        var sin = [
+            [1, 107.9],
+            [2, 274.4],
+            [3, 497.0],
+            [4, 496.5],
+            [5, 484.6],
+//            [6, 484.6],
+//            [7, 484.6],
+            [8, 478.8],
+            [9, 557.5],
+            [10, 614.2],
+            [11, 726.6],
+            [12, 882.7]
+        ]
+        
+        var cos = [
+            [1, 107.9],
+            [12, 882.7]
+        ]
+
+        var line_data1 = {
+          data: sin,
+        label: "Total Profit",
+          color: "#3c8dbc",
+            lines: { fill: true }
+            
+        };
+        var line_data2 = {
+          data: cos,
+        label: "Total Profit",
+          color: "#f56954",
+         lines: { fill: false }
+
+        };
+        $.plot("#line-chart2", [line_data1], {
+          grid: {
+            hoverable: true,
+            borderColor: "#f3f3f3",
+            borderWidth: 1,
+            tickColor: "#f3f3f3"
+          },
+          series: {
+            shadowSize: 0,
+            lines: {
+              show: true
+            },
+            points: {
+              show: true
+            }
+          },
+          lines: {
+            fill: false,
+            color: ["#3c8dbc", "#f56954"]
+          },
+                        legend: {show: false},
+
+          yaxis: {
+            show: true,
+              min: -200
+          },
+          xaxis: {
+            show: true,
+            mode: "categories",
+
+          }
+        });
+        //Initialize tooltip on hover
+        $("<div class='tooltip-inner' id='line-chart-tooltip2'></div>").css({
+          position: "absolute",
+          display: "none",
+          opacity: 0.8
+        }).appendTo("body");
+        $("#line-chart2").bind("plothover", function (event, pos, item) {
+
+          if (item) {
+            var x = item.datapoint[0].toFixed(2),
+                    y = item.datapoint[1].toFixed(2);
+
+            $("#line-chart-tooltip2").html(item.series.label + " of " + x + " = " + y)
+                    .css({top: item.pageY + 5, left: item.pageX + 5})
+                    .fadeIn(200);
+          } else {
+            $("#line-chart-tooltip2").hide();
+          }
+
+        });
+        /* END LINE CHART */
+
+       /*
+         * BAR CHART
+         * ---------
+         */
+
+        var bar_data = {
+          data: [
+             [1, 0],
+            [2, 35.7],
+              [3, 0],
+            [4, 142.2],
+              [5, 0]
+            [6, 120.2],
+            [7, 21.8],
+            [8, 118.1],
+            [9,0],
+            [10, 18.4],
+            [11, 11.0],
+            [12, 32.5],
+            [13, 144.4],
+            [14, 91.3],
+            [15, 0],
+            [16, 0],
+            [17, 0],
+            [18, 1.8],
+            [19, 0],
+            [20, 62.2],
+            [21, 0],
+            [22, 50.6],
+            [23, 0],
+            [24, 0],
+            [25, 120.0],
+            [26, 34.0],
+            [27, 0],
+            [28, 1.2],
+            [29, 33.1],
+            [30, 90.8],
+            [31, 0],
+            [32, 64.9],
+            [33, 151.6],
+            [34, 0],
+            [35, 34.9],
+            [36, 12.3],
+            [37, 0]
+          ],
+          color: "#3c8dbc"
+        };
+        
+        var bar_data2 = {
+          data: [
+                [1, -41.1],
+              [2, 0],
+                [3, -9.9],
+              [4, 0],
+                [5, -67.9],
+              [6, 0],
+              [7, 0],
+              [8, 0],
+                [9, -44.8],
+              [10, 0],
+              [11, 0],
+              [12, 0],
+            [13, 0],
+              [14, 0],
+              [15, -0.3],
+              [16, -11.3],
+             [17, -11.7],
+            [18, 0],
+            [19, -69.5],
+              [20, 0],
+              [21, -76.0],
+              [22, 0],
+              [23, -46.1],
+              [24, -4.1],
+              [25, 0],
+              [26, 0],
+              [27, -39.8],
+              [28, 0],
+              [29, 0],
+              [30, 0],
+              [31, -13.0],
+              [32, 0],
+              [33, 0],
+              [34, -52.7],
+              [35, 0],
+              [36, 0],
+              [37, -22.1]
+          ],
+          color: "#f56954"
+        };
+        
+        $.plot("#bar-chart", [bar_data2, bar_data], {
+          grid: {
+            borderWidth: 1,
+            borderColor: "#f3f3f3",
+            tickColor: "#f3f3f3"
+          },
+          series: {
+            bars: {
+              show: true,
+              barWidth: 0.5,
+              align: "center"
+            }
+          },
+          xaxis: {
+            mode: "categories",
+            tickLength: 0
+          }          
+        });
+        /* END BAR CHART */
+ /*
+         * BAR CHART
+         * ---------
+         */
+
+        var bar_data5 = {
+          data: [
+             [1, 0],
+            [2, 32.5],
+              [3, 0],
+            [4, 142.2],
+              [5, 0],
+            [6, 54.6],
+            [7, 19.8],
+            [8, 98.4],
+            [9,0],
+            [10, 16.7],
+            [11, 6.9],
+            [12, 21.7],
+            [13, 103.1],
+            [14, 70.2],
+            [15, 0],
+            [16, 0],
+            [17, 0],
+            [18, 1.4],
+            [19, 0],
+            [20, 44.4],
+            [21, 0],
+            [22, 31.6],
+            [23, 0],
+            [24, 0],
+            [25, 100.0],
+            [26, 24.3],
+            [27, 0],
+            [28, 0.8],
+            [29, 27.6],
+            [30, 64.9],
+            [31, 0],
+            [32, 72.1],
+            [33, 108.3],
+            [34, 0],
+            [35, 23.3],
+            [36, 11.2],
+            [37, 0]
+          ],
+          color: "#3c8dbc"
+        };
+        
+        var bar_data6 = {
+          data: [
+                [1, -31.6],
+              [2, 0],
+                [3, -7.6],
+              [4, 0],
+                [5, -56.6],
+              [6, 0],
+              [7, 0],
+              [8, 0],
+                [9, -34.5],
+              [10, 0],
+              [11, 0],
+              [12, 0],
+            [13, 0],
+              [14, 0],
+              [15, -0.2],
+              [16, -7.5],
+             [17, -13],
+            [18, 0],
+            [19, -77.2],
+              [20, 0],
+              [21, -50.7],
+              [22, 0],
+              [23, -41.9],
+              [24, -3.4],
+              [25, 0],
+              [26, 0],
+              [27, -36.2],
+              [28, 0],
+              [29, 0],
+              [30, 0],
+              [31, -9.3],
+              [32, 0],
+              [33, 0],
+              [34, -31.0],
+              [35, 0],
+              [36, 0],
+              [37, -22.1]
+          ],
+          color: "#f56954"
+        };
+        $.plot("#bar-chart2", [bar_data5, bar_data6], {
+          grid: {
+            borderWidth: 1,
+            borderColor: "#f3f3f3",
+            tickColor: "#f3f3f3"
+          },
+          series: {
+            bars: {
+              show: true,
+              barWidth: 0.5,
+              align: "center"
+            }
+          },
+          xaxis: {
+            mode: "categories",
+            tickLength: 0
+          },
+        yaxis: {
+            max: 200    
+        }
+        });
+        /* END BAR CHART */
+     /*
+         * DONUT CHART
+         * -----------
+         */
+
+        var donutData = [
+          {label: "EPL", data: 327, color: "#3c8dbc"},
+          {label: "BDL", data: 316, color: "#0073b7"},
+          {label: "LIGA", data: 239, color: "#00c0ef"}
+        ];
+        $.plot("#pie-chart", donutData, {
+          series: {
+            pie: {
+              show: true,
+              radius: 1,
+              innerRadius: 0.4,
+              label: {
+                show: true,
+                radius: 2.1 / 3,
+                formatter: labelFormatter,
+                threshold: 0.1
+              }
+
+            }
+          },
+         
+          legend: {
+            show: false
+          },
+            
+          grid: {
+            hoverable: true,
+              clickable: true
+          }
+        });
+        
+   $("#pie-chart").bind("plothover", function(event, pos, obj){
+ if (!obj){return;}
+       $('.pie-information').children().hide();    
+       $('.' + (obj.series.label)).show();
+    });
+        
+    
+
+//$(".pieLabel").click(function() { alert("clicked"); });
+		
+        /*
+         * END DONUT CHART
+         */
+      });
+
+      /*
+       * Custom Label formatter
+       * ----------------------
+       */
+      function labelFormatter(label, series) {
+        return "<div style='font-size:13px; text-align:center; padding:2px; color: #fff; font-weight: 600;'>"
+                + label
+                + "<br/>"
+
+                + "(" + Math.round(series.percent) + "%)</div>";
+      }
+    </script>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-59888424-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+  
+  </body>
+</html>
