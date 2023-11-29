@@ -3,7 +3,6 @@
 
 export const SITE_TITLE = "Robin Papa | Process Engineer";
 export const SITE_DESCRIPTION = "Robin develops applications for every business process."
-export const TWITTER_HANDLE = "";
 export const MY_NAME = "Robin Papa";
 
 // setup in astro.config.mjs
