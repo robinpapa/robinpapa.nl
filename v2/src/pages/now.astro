@@ -1,0 +1,61 @@
+---
+import PageMeta from "../components/PageMeta.astro";
+import AppLayout from "../layouts/AppLayout.astro";
+import { SITE_TITLE } from "../config";
+---
+
+<AppLayout>
+  <PageMeta title={`${SITE_TITLE}`} slot="meta" />
+  <Fragment slot="main">
+    <section class="mb-8">
+      <div class="mb-6">
+        <h1
+          class="text-4xl pt-4 pb-2 overflow-hidden"
+        >
+          <!-- <span
+        class="
+            bg-gradient-to-bl bg-no-repeat bg-bottom bg-[length:90%_40%]
+            from-primary-blue to-primary-blue dark:from-primary-blue dark:to-primary-blue
+        "
+      > -->
+          <span class="italic leading-normal">
+            Now <br class="m-hide" />
+          </span>
+        </h1>
+        <p class="text-xs pb-4">
+          Last updated: 29 Oct, 2023. <a
+            href="https://nownownow.com/about">What is a now page?</a
+          >
+        </p>
+      </div>
+      <div>
+        <h2 class="">What I'm currently working on.</h2>
+        <p class="mb-5">
+          Ik werk momenteel als operationeel manager bij <a
+            href="https://www.froconsur.com">Froconsur</a
+          > in Leeuwarden, waar ik verantwoordelijk ben voor procesoptimalisatie,
+          automatisering en het ontwikkelen van applicaties.
+        </p>
+
+        <h2 class="">En verder.</h2>
+        <ul>
+          <li>Athene bezoeken</li>
+          <li>Deze website lanceren</li>
+          <li>Een collectie van inspirerende artikelen en websites publiceren</li>
+        </ul>
+
+        <h2 class="">Recent.</h2>
+        <ul>
+          <li>Road trip Noord-Spanje</li>
+          
+        </ul>
+
+        <h2 class="">Toekomst.</h2>
+        <ul>
+          <li>Naar St. Maarten</li>
+          
+        </ul>
+      </div>
+    </section>
+  </Fragment>
+</AppLayout>

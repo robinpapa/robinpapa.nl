@@ -1,0 +1,67 @@
+---
+import PageMeta from "../components/PageMeta.astro";
+import AppLayout from "../layouts/AppLayout.astro";
+import { SITE_TITLE } from "../config";
+---
+
+<AppLayout>
+  <PageMeta title={`${SITE_TITLE}`} slot="meta" />
+  <Fragment slot="main">
+    <section class="mb-8">
+      <div class="mb-6">
+        <h1
+          class="text-4xl pt-4 pb-2 overflow-hidden"
+        >
+          <!-- <span
+        class="
+            bg-gradient-to-bl bg-no-repeat bg-bottom bg-[length:90%_40%]
+            from-primary-blue to-primary-blue dark:from-primary-blue dark:to-primary-blue
+        "
+      > -->
+          <span class="italic leading-normal">
+            About Robin. <br class="m-hide" />
+          </span>
+        </h1>
+      </div>
+      <h2 class="pb-1">Persoonlijk.</h2>
+      <p class="mb-8">In het dagelijks leven verbeter ik bedrijfsprocessen, bouw ik applicaties die het werk makkelijker maken en onderzoek ik de toepassingen van AI.
+        <br/><br/>Ik woon in vestingstad <a href="https://www.visitleeuwarden.com/nl">Leeuwarden</a> met <a href="https://www.foodiearanka.nl">🙎🏼‍♀️ Aranka</a> en <a href="https://www.instagram.com/cats.nina.nora/">😼 Nina & 😸 Nora</a>.
+        In mijn vrije tijd speel ik graag <a href="https://mijnknltb.toernooi.nl/player-profile/2bd4260a-d4a5-41c9-8b73-94aaaa7b5f8e">padel</a>.
+      </p> 
+      <h3 class="pb-2">Wat ik heb gedaan.</h2>
+      <table class="text-charcoal text-sm leading-6 mb-8">
+        <tbody
+          ><tr class="align-top"
+            ><td>2019 - nu</td><td class="pl-8">Operational & IT Manager<br /><i>Froconsur</i></td
+            ></tr
+          ><tr class="align-top"
+            ><td>2017 - 2018</td><td class="pl-8">Management Consultant<br /><i>First Consulting / Valcon</i></td></tr
+          ><tr class="align-top"
+            ><td>2015 - 2016</td><td class="pl-8">Application Developer<br /><i>Workflow Agency (co-founder)</i></td></tr
+          ><tr class="align-top"
+            ><td>2011 - 2014</td><td class="pl-8">Web Developer<br /><i>robinpapa.nl (freelance)</i></td
+            ></tr
+          ></tbody
+        >
+      </table> 
+
+      <h3 class="pb-2">Wat ik goed kan.</h2>
+        <table class="text-charcoal text-sm leading-6">
+          <tbody
+            ><tr class="align-top"
+              ><td>2019 - nu</td><td class="pl-8">Operational & IT Manager<br /><i>Froconsur</i></td
+              ></tr
+            ><tr class="align-top"
+              ><td>2017 - 2018</td><td class="pl-8">Management Consultant<br /><i>First Consulting / Valcon</i></td></tr
+            ><tr class="align-top"
+              ><td>2015 - 2016</td><td class="pl-8">Application Developer<br /><i>Workflow Agency (co-founder)</i></td></tr
+            ><tr class="align-top"
+              ><td>2011 - 2014</td><td class="pl-8">Web Developer<br /><i>robinpapa.nl (freelance)</i></td
+              ></tr
+            ></tbody
+          >
+        </table> 
+
+    </section>
+  </Fragment>
+</AppLayout>

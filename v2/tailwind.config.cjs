@@ -6,7 +6,7 @@ module.exports = {
     extend: {
       fontFamily: {
         body: ["Space Grotesk", "sans-serif"],
-        heading: ["Space Grotesk", "sans-serif"],
+        heading: ["Noto Serif", "serif"],
       },
       colors: {
         transparent: "transparent",
