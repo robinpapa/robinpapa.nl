@@ -1,4 +1,12 @@
 ---
+let randomNumber = Math.floor(Math.random() * 2);
+const introTextCollection = [
+  ['Robin develops applications','for every business process.'],
+  ['I combine business processes', 'with practical technical solutions.'],
+  // ['3A', '3B'],
+  // ['4A', '4B'],
+];
+let chosenText = introTextCollection[randomNumber];
 ---
 
 <section class="mb-8">
@@ -14,9 +22,8 @@
       "
     > -->
     <span class="italic leading-normal">
-      I develop applications <br class="m-hide">
-      <!-- Robin combineert business met IT, <br class="m-hide"> -->
-      for every business process.
+      {chosenText[0]}<br class="m-hide">
+      {chosenText[1]}
     </span>
   </h1>
     

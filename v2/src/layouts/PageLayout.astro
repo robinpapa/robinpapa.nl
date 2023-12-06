@@ -31,27 +31,20 @@ import Footer from "../components/Footer.astro";
     <FontAwesome />
   </head>
 
-  <body
-    class="max-w-3xl mx-auto min-h-screen px-6 sm:px-8"
-  >
+  <body class="max-w-3xl mx-auto min-h-screen p-20 sm:p-12">
     <Header />
+    <h1 class="text-4xl pt-4 pb-2 overflow-hidden">
+      <!-- <span
+        class="
+            bg-gradient-to-bl bg-no-repeat bg-bottom bg-[length:90%_40%]
+            from-primary-blue to-primary-blue dark:from-primary-blue dark:to-primary-blue
+        "
+      > -->
+      <span class="italic leading-normal">Favorites</span>
+    </h1>
     <main id="main">
       <slot name="main" />
     </main>
     <Footer />
-    <style>
-      body {
-        display: grid;
-        grid-template-areas:
-          "header"
-          "main"
-          "footer";
-        grid-template-rows: 5rem minmax(0, 1fr) 5rem;
-        grid-template-columns: minmax(0, 1fr);
-      }
-      main {
-        grid-area: main;
-      }
-    </style>
   </body>
 </html>

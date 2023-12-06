@@ -1,13 +1,13 @@
 ---
 import { readAll } from "../lib/markdoc/read";
-import { bookmark } from "../lib/markdoc/frontmatter.schema";
+import { favorite } from "../lib/markdoc/frontmatter.schema";
 import PageLayout from "../layouts/PageLayout.astro";
 import PageMeta from "../components/PageMeta.astro";
 import { SITE_TITLE } from "../config";
 
 const posts = await readAll({
-  directory: "bookmarks",
-  frontmatterSchema: bookmark,
+  directory: "favorites",
+  frontmatterSchema: favorite,
 });
 
 const sortedPosts = posts
@@ -22,7 +22,9 @@ const sortedPosts = posts
 <PageLayout>
   <PageMeta title={`Blog | ${SITE_TITLE}`} slot="meta" />
   <section slot="main">
-    <ul>
+    <h2>A collection of interesting tools divided in several categories</h2>
+    <p>Whenever I run into startups, apps or tools related to the categories below, I'll add them to the list. I hope it helps you to work on innovative opportunities.</p>
+    <ul class="mt-4">
       {
         sortedPosts.map((post) => {
           const formattedDate = new Date(
@@ -54,7 +56,7 @@ const sortedPosts = posts
                   </a>
                 ) : (
                   <a
-                    href={`/blog/${post.slug}`}
+                    href={`/favorites/${post.slug}`}
                     class="unset
                         transition-[background-size] duration-300 
                         bg-gradient-to-r bg-left-bottom bg-no-repeat
@@ -66,7 +68,7 @@ const sortedPosts = posts
                   </a>
                 )}
               </div>
-              <div class="text-text-muted text-sm italic pt-1">
+              <div class="hidden text-text-muted text-sm italic pt-4">
                 <time datetime={post.frontmatter.date.toISOString()}>
                   {formattedDate}
                 </time>

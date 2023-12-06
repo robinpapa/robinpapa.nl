@@ -42,16 +42,21 @@ const formattedDate = new Date(date).toLocaleDateString("en-us", {
   </head>
 
   <body
-    class="max-w-3xl mx-auto min-h-screen px-6 sm:px-8"
+    class="max-w-3xl mx-auto min-h-screen p-20 sm:p-12"
   >
     <Header />
     <main id="main">
       <section class="blog-post prose max-w-none prose-bubblegum">
-        <h1 class="m-0 mb-[0.25em]">
-          <span class="
-              pl-6 relative block leading-[150%]
-              after:absolute after:content-[''] after:w-2 after:h-full after:top-0 after:left-0 after:bg-primary-green
-            ">
+        <h1
+          class="text-4xl pt-4 pb-2 overflow-hidden"
+        >
+          <!-- <span
+        class="
+            bg-gradient-to-bl bg-no-repeat bg-bottom bg-[length:90%_40%]
+            from-primary-blue to-primary-blue dark:from-primary-blue dark:to-primary-blue
+        "
+      > -->
+          <span class="italic leading-normal">
             {title}
           </span>
         </h1>

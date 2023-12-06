@@ -8,7 +8,6 @@ import { config } from "./markdoc.config";
 
 // path is relative to where you run the `yarn build` command
 const contentDirectory = path.normalize("./content");
-
 async function parseAndTransform({ content }: { content: string }) {
   const ast = Markdoc.parse(content);
 
@@ -58,13 +57,12 @@ export async function read<T extends z.ZodTypeAny>({
     schema,
     filepath,
   });
-
   const filename = filepath.split("/").pop();
+
   if (typeof filename !== "string") {
     throw new Error("Check what went wrong");
   }
   const fileNameWithoutExtension = filename.replace(/\.[^.]*$/, "");
-
   return {
     slug: fileNameWithoutExtension,
     content: transformedContent,
@@ -97,6 +95,5 @@ export async function readAll<T extends z.ZodTypeAny>({
 }) {
   const pathToDir = path.posix.join(contentDirectory, directory);
   const paths = await globby(`${pathToDir}/*.md`);
-
   return Promise.all(paths.map((path) => read({ filepath: path, schema })));
 }

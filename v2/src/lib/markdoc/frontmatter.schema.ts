@@ -23,7 +23,7 @@ const baseSchema = z.object({
   If you don't want to link posts written in external websites, you could
   simplify this to just use the markdown schema.
 */
-export const bookmark = z.discriminatedUnion("external", [
+export const favorite = z.discriminatedUnion("external", [
   // markdown
   baseSchema.extend({
     external: z.literal(false),
@@ -45,3 +45,5 @@ export const bookmark = z.discriminatedUnion("external", [
 export const project = baseSchema.extend({
   url: z.string(),
 });
+
+
