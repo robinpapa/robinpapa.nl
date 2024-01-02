@@ -9,6 +9,8 @@
     https://tailwindcss.com/docs/customizing-colors#using-css-variables 
 */
 @layer base {
+
+    
     
     /* light theme */
     .theme-bubblegum {
@@ -53,10 +55,10 @@
         /* Custom #FFDE69 */
         --color-primary-yellow: 255 222 105;
 
-        /* tailwind slate-300 */
-        --color-text-body: 203 213 225;
+        /* tailwind slate-100 */
+        --color-text-body: 148 163 184;
         /* white */
-        --color-text-heading: 241 245 249;
+        --color-text-heading: 226 232 240;
         /* white */
         --color-text-bold: 255 255 255;
         /* tailwind slate-400 #94a3b8 */
@@ -86,15 +88,42 @@
         font-size: 1em;
         line-height: 1.85;
         scroll-behavior: smooth;
+        text-rendering: optimizelegibility;
+        -moz-osx-font-smoothing: grayscale;
+        scrollbar-width: thin;
     }
 
-    h1,
+    /* Animations */
+    .staggering .stagger-unit {
+        opacity: 0;
+        transform: translateY(20px);
+        transition-property: opacity, transform;
+        transition-duration: 0.7s;
+        transition-timing-function: cubic-bezier(0.750, -0.015, 0.565, 1.055);
+    }
+    
+    .loaded .stagger-unit {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: calc(0.200s * var(--stagger));
+    }
+
+    em {
+        font-family: theme('fontFamily.heading');
+        font-weight: 400;
+        font-style: italic;
+    }
+
+    h1 {
+        font-family: theme('fontFamily.body');
+        /* font-weight: 400; */
+    }
     h2,
     h3,
     h4,
     h5,
     h6 {
-        font-family: theme('fontFamily.heading');
+        font-family: theme('fontFamily.body');
         color: theme('colors.text.heading');
     }
 
@@ -111,6 +140,8 @@
     h3 {
         font-size: 20px;
     }
+
+    
 
 }
 
@@ -134,10 +165,13 @@
     a:not(.unset) {
         position: relative;
         box-decoration-break: clone;
-        text-decoration: none;
+        text-decoration: underline;
+        color: theme('colors.text.link');
+        padding: 0 2px;
+
     }
     a:not(.unset):after {
-        left: 0;
+        /* left: 0;
         right: 0;
         bottom: -3px;
         content: "";
@@ -147,10 +181,8 @@
         transform-origin: left center;
         transition: all .150s ease-in-out;
         background-image: linear-gradient(to right, theme('colors.text.link'), theme('colors.text.link'));
-        transform: translateZ(0) scale(1);
-        /* padding: 0 2px; */
+        transform: translateZ(0) scale(1); */
         /* text-underline-offset: 6px; */
-        /* text-color: theme('colors.text.link'); */
         /* background: theme('colors.bg.selection'); */
     }
 
@@ -188,7 +220,7 @@
     ul:not(.unset):not(:where([class~="prose"] *))>li::before {
         position: absolute;
         left: 0;
-        content: "»";
+        content: "•";
         color: rgb(var(--color-text-muted));
     }
 
@@ -216,9 +248,15 @@
 
     /* ------ REUSABLE UTILS - START ------ */
     .animated-link {
+        font-size: 16px;
         position: relative;
         box-decoration-break: clone;
         text-decoration: none;
+        color: theme('colors.text.muted');
+        transition: color .080s ease-in-out;
+    }
+    .animated-link:hover, .animated-link:active {
+        color: theme('colors.text.link');
     }
 
     .animated-link:hover:after {
@@ -234,8 +272,12 @@
         position: absolute;
         transform: translateZ(0) scaleX(0);
         transform-origin: left center;
-        transition: all .150s ease-in-out;
+        transition: all .100s ease-in-out;
         background-image: linear-gradient(to right, theme('colors.text.link'), theme('colors.text.link'));
+    }
+
+    .animated-link.show {
+        color: theme('colors.text.link');
     }
 
     .animated-link.show:after {

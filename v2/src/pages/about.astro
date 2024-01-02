@@ -1,47 +1,60 @@
 ---
+// Important
+const pageTitle = 'About Robin.';
+
+
+// Imports
 import PageMeta from "../components/PageMeta.astro";
-import AppLayout from "../layouts/AppLayout.astro";
 import { SITE_TITLE } from "../config";
+import PageLayout from "../layouts/PageLayout.astro";
 ---
 
-<AppLayout>
+<PageLayout>
   <PageMeta title={`${SITE_TITLE}`} slot="meta" />
+  <Fragment slot="title">{pageTitle}</Fragment>
   <Fragment slot="main">
     <section class="mb-8">
-      <div class="mb-6">
-        <h1
-          class="text-4xl pt-4 pb-2 overflow-hidden"
-        >
-          <!-- <span
-        class="
-            bg-gradient-to-bl bg-no-repeat bg-bottom bg-[length:90%_40%]
-            from-primary-blue to-primary-blue dark:from-primary-blue dark:to-primary-blue
-        "
-      > -->
-          <span class="italic leading-normal">
-            About Robin. <br class="m-hide" />
-          </span>
-        </h1>
+      <img
+        class="mt-0 mb-8 w-2/4 rounded-[8px] backdrop-grayscale stagger-unit" style="--stagger: 1;"
+        src="/images/photo.jpg"
+      />
+      <div class="stagger-unit" style="--stagger: 2">
+        <h2 class="pb-1">Me, personally.</h2>
+        <p class="mb-8">
+          In daily life, I improve business processes, build applications that
+          make work easier, and explore the applications of AI and business
+          automation.
+          <br /><br />I live in <a href="https://www.visitleeuwarden.com/nl"
+            >Leeuwarden</a
+          > with <a href="https://www.foodiearanka.nl">🙎🏼‍♀️ Aranka</a>, <a
+            href="https://www.instagram.com/cats.nina.nora/">😼 Nina and 😸 Nora</a>. In my free time, you can find me on the <a
+            href="https://mijnknltb.toernooi.nl/player-profile/2bd4260a-d4a5-41c9-8b73-94aaaa7b5f8e"
+          >
+            padel courts</a>, improving my desk or collecting platinum trophies on PS5.
+        </p>
       </div>
-      <h2 class="pb-1">Personal.</h2>
-      <p class="mb-8">In daily life, I improve business processes, build applications that make work easier, and explore the applications of AI and business automation.
-        <br/><br/>I live in <a href="https://www.visitleeuwarden.com/nl">Leeuwarden</a> with <a href="https://www.foodiearanka.nl">🙎🏼‍♀️ Aranka</a>, <a href="https://www.instagram.com/cats.nina.nora/">😼 Nina and 😸 Nora</a>.
-        In my free time, you can find me on the <a href="https://mijnknltb.toernooi.nl/player-profile/2bd4260a-d4a5-41c9-8b73-94aaaa7b5f8e"> padel courts</a>.
-      </p> 
-      <h3 class="pb-2">Some achievements.</h2>
-      <table class="text-charcoal text-sm leading-6 mb-8">
-        <tbody
-          ><tr class="align-top"
-              ><td>2023</td><td class="pl-8">Strategic Leadership Program, Nyenrode Business University<br><i>Acquired strategic insights and tools to enhance strategic thought processes.</i></td
-              ></tr  
-          ><tr class="align-top mt-2"
-            ><td>2019 - now</td><td class="pl-8">Operational & IT Manager at Froconsur<br/><i>Implemented low-code tooling, RPA and other frameworks.</i></td
-            ></tr
-          ></tbody
-        >
-      </table> 
-
-   
+      <div class="stagger-unit" style="--stagger: 3">
+        <h2 class="pb-2">Some achievements.</h2>
+        <table class="text-charcoal text-sm leading-6 mb-8">
+          <tbody
+            ><tr class="align-top"
+              ><td>2023</td><td class="pl-8"
+                >Strategic Leadership Program, Nyenrode Business University<br
+                /><i
+                  >Acquired strategic insights and tools to enhance strategic
+                  thought processes.</i
+                ></td
+              ></tr
+            ><tr class="align-top mt-2"
+              ><td>2019 - now</td><td class="pl-8"
+                >Operational & IT Manager at Froconsur<br /><i
+                  >Implemented low-code tooling, RPA and other frameworks.</i
+                ></td
+              ></tr
+            ></tbody
+          >
+        </table>
+      </div>
     </section>
   </Fragment>
 </AppLayout>

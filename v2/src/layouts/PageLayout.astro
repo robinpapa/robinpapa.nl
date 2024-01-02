@@ -1,10 +1,5 @@
 ---
-/* 
-  This layout is used in 
-  - pages/index.astro
-  - pages/blog.astro
-  - pages/projects.astro
-*/
+// Important stuff
 
 // Import the global.css file here so that it is included on
 import "../styles/global.css";
@@ -31,20 +26,18 @@ import Footer from "../components/Footer.astro";
     <FontAwesome />
   </head>
 
-  <body class="max-w-3xl mx-auto min-h-screen p-20 sm:p-12">
+  <body class="max-w-3xl mx-auto min-h-screen sm:px-16 sm:py-4">
     <Header />
-    <h1 class="text-4xl pt-4 pb-2 overflow-hidden">
-      <!-- <span
-        class="
-            bg-gradient-to-bl bg-no-repeat bg-bottom bg-[length:90%_40%]
-            from-primary-blue to-primary-blue dark:from-primary-blue dark:to-primary-blue
-        "
-      > -->
-      <span class="italic leading-normal">Favorites</span>
-    </h1>
-    <main id="main">
-      <slot name="main" />
-    </main>
+      <div class="staggering">
+        <h1 class="text-3xl pt-4 pb-2 overflow-hidden stagger-unit" style="--stagger: 0">
+          <span class="leading-normal">
+            <slot name="title" />
+          </span>
+        </h1>
+        <main id="main">
+          <slot name="main" />
+        </main>
+      </div>
     <Footer />
   </body>
 </html>

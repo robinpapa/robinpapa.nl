@@ -30,13 +30,13 @@ import Footer from "../components/Footer.astro";
   </head>
 
   <body
-    class="max-w-3xl mx-auto min-h-screen p-20 sm:p-12"
+    class="max-w-3xl mx-auto min-h-screen sm:px-16 sm:py-4"
   >
     <Header />
-    <main id="main">
+    <main id="main" style="opacity: 1; transform: none">
       <slot name="main" />
     </main>
-    <!-- <Footer /> -->
+    <Footer />
     
   </body>
 </html>

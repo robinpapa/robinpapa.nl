@@ -29,6 +29,7 @@ if (isBuild) {
 
 export default defineConfig({
   server: { port: SERVER_PORT },
+  prefetch: true,
   site: BASE_URL,
   integrations: [
     sitemap(),

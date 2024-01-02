@@ -1,46 +1,53 @@
 ---
 let randomNumber = Math.floor(Math.random() * 2);
 const introTextCollection = [
-  ['Robin develops applications','for every business process.'],
-  ['I combine business processes', 'with practical technical solutions.'],
+  ['Robin develops applications for business'],
+  ['I combine business processes']
   // ['3A', '3B'],
   // ['4A', '4B'],
 ];
 let chosenText = introTextCollection[randomNumber];
+
 ---
 
-<section class="mb-8">
-  <div class="mb-6">
 
-  <h1
-    class="text-4xl pt-4 pb-2 overflow-hidden "
-  >
-    <!-- <span
-      class="
-          bg-gradient-to-bl bg-no-repeat bg-bottom bg-[length:90%_40%]
-          from-primary-blue to-primary-blue dark:from-primary-blue dark:to-primary-blue
-      "
-    > -->
-    <span class="italic leading-normal">
-      {chosenText[0]}<br class="m-hide">
-      {chosenText[1]}
+
+<section class="mb-8 staggering">
+  <h1 class="text-3xl pt-4 pb-2 stagger-unit overflow-hidden" style="--stagger: 0;">
+    <span class="leading-normal">
+      Hello, I'm Robin.
     </span>
   </h1>
-    
-  </div>
   <div>
-    <h2 class="">About Robin.</h2>
-    <p class="mb-5">
-      Hello, I'm Robin Papa. I combine technology with process optimization to assist every organization in developing innovative possibilities.
+    <h2 class="">
+      <span class="inline-block leading-normal stagger-unit" style="--stagger: 1">I combine business processes with technology.</span>
+      <span class="inline-block leading-normal stagger-unit" style="--stagger: 1">Also, I enjoy learning, testing and improving stuff.</span>
+      </span>
+    </h2>
+  </div>
+  
+  <div class="mt-8 stagger-unit" style="--stagger: 2">
+    <h3>How I add value.</h3>
+    <p class="mb-4">
+      In daily life, I combine technology with process optimization to allow people in organization to fulfill their potential. 
     </p>
-    <p class="mb-5">
+    <p>
       I believe in utilizing technology for tasks that don't inspire passion, enabling us to redirect our focus towards creating real value.
     </p>
-
-    <h3 class="">How I add value.</h3>
-    <p class="text-s mb-5">
-      Discover what I'm working on <a href="/now/">now</a> or learn more <a class="animated-link" href="/about/">about me</a>. 
+  </div>
+  <div class="mt-6 stagger-unit" style="--stagger: 3;">
+    <h3 class="">Learn more about me.</h3>
+    <p class="text-s mb-4">
+      Discover what I'm working on <a href="/now/">now</a> or learn more <a href="/about/">about me</a>. 
     </p>
+  </div>
+
+  <div class="mt-6 stagger-unit" style="--stagger: 4;">
+    <h3 class="">Another subheader.</h3>
+    <p class="text-s mb-4">
+      I believe in utilizing technology for tasks that don't inspire passion, enabling us to redirect our focus towards creating real value.
+    </p>
+  </div>
 
     <!-- <h3 class="">My notes.</h3>
     <p class="header-s">
@@ -49,5 +56,4 @@ let chosenText = introTextCollection[randomNumber];
       </ul>
     </p> -->
     
-  </div>
 </section>

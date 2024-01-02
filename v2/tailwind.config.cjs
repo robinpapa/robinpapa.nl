@@ -5,8 +5,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        body: ["Space Grotesk", "sans-serif"],
-        heading: ["Noto Serif", "serif"],
+        body: ["IBM Plex Sans", "sans-serif"],
+        heading: ["IBM Plex Serif", "serif"],
       },
       colors: {
         transparent: "transparent",

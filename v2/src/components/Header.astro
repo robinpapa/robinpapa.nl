@@ -4,7 +4,14 @@ import Nav from "./Nav.astro";
 import DarkModeToggle from "./DarkModeToggle.astro";
 ---
 
-<header class="mt-4 mb-12 flex justify-between">
+<script> 
+  // For the staggering animation
+  window.onload = function() {
+      document.body.className += " loaded";
+  }
+</script>
+
+<header class="mt-0 mb-12 flex justify-between">
   <Nav />
   <DarkModeToggle />
   <!-- <Avatar class="mt-8 mr-4" /> -->
