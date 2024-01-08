@@ -37,7 +37,7 @@
         --color-text-selection: 37 99 235;
 
         /* white */
-        --color-bg-body: 255 255 255;
+        --color-bg-body: 242 242 250;
         /* tailwind amber-100 #fef3c7 */
         --color-bg-code: 254 243 199;
         /* tailwind lime-200 #d9f99d */
@@ -98,14 +98,14 @@
         opacity: 0;
         transform: translateY(20px);
         transition-property: opacity, transform;
-        transition-duration: 0.7s;
+        transition-duration: 0.5s;
         transition-timing-function: cubic-bezier(0.750, -0.015, 0.565, 1.055);
     }
     
     .loaded .stagger-unit {
         opacity: 1;
         transform: translateY(0);
-        transition-delay: calc(0.200s * var(--stagger));
+        transition-delay: calc(0.050s * var(--stagger));
     }
 
     em {

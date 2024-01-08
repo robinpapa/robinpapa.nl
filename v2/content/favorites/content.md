@@ -1,7 +1,7 @@
 ---
 external: false
 draft: false
-title: Websites to Regularly Visit
+title: Content to Read
 description: This post is a draft and won't be built.
 date: 2022-11-22
 ---

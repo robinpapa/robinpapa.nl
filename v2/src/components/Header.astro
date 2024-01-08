@@ -6,12 +6,12 @@ import DarkModeToggle from "./DarkModeToggle.astro";
 
 <script> 
   // For the staggering animation
-  window.onload = function() {
+  document.addEventListener("DOMContentLoaded", function() {
       document.body.className += " loaded";
-  }
+  });
 </script>
 
-<header class="mt-0 mb-12 flex justify-between">
+<header class="mt-8 mb-12 flex justify-between">
   <Nav />
   <DarkModeToggle />
   <!-- <Avatar class="mt-8 mr-4" /> -->
