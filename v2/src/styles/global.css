@@ -98,7 +98,7 @@
         opacity: 0;
         transform: translateY(20px);
         transition-property: opacity, transform;
-        transition-duration: 0.5s;
+        transition-duration: 0.3s;
         transition-timing-function: cubic-bezier(0.750, -0.015, 0.565, 1.055);
     }
     

@@ -12,19 +12,19 @@ const posts = await readAll({
 
 const sortedPosts = posts
   .filter((p) => p.frontmatter.draft !== true)
-  .sort(
-    (a, b) =>
-      new Date(b.frontmatter.date).valueOf() -
-      new Date(a.frontmatter.date).valueOf()
-  );
+  .sort((a, b) => a.frontmatter.title.localeCompare(b.frontmatter.title));
 ---
 
 <PageLayout>
   <PageMeta title={`Blog | ${SITE_TITLE}`} slot="meta" />
   <section slot="title">Favorites.</section>
-  <section slot="main">
+  <section slot="main" class="stagger-unit" style="--stagger: 2">
     <h2>A collection of useful apps and websites</h2>
-    <p>Whenever I run into startups, apps or tools related to the categories below, I'll add them to the list. I hope it helps you to work on innovative opportunities.</p>
+    <p>
+      Whenever I run into startups, apps or tools related to the categories
+      below, I'll add them to the list. I hope it helps you to work on
+      innovative opportunities.
+    </p>
     <ul class="mt-4">
       {
         sortedPosts.map((post) => {
@@ -50,7 +50,7 @@ const sortedPosts = posts
                       "
                   >
                     <span>{post.frontmatter.title}</span>
-                    <span></span>
+                    <span />
                     <span>
                       <i class="ml-1 mr-1 text-[12px] pb-2 fa-solid fa-up-right-from-square" />
                     </span>
@@ -58,20 +58,15 @@ const sortedPosts = posts
                 ) : (
                   <a
                     href={`/favorites/${post.slug}`}
-                    class="unset
-                        transition-[background-size] duration-300 
-                        bg-gradient-to-r bg-left-bottom bg-no-repeat
-                        bg-[length:0%_55%] hover:bg-[length:100%_55%] dark:bg-[length:0%_2px] hover:dark:bg-[length:100%_2px]
-                        from-primary-blue to-primary-blue dark:from-primary-blue dark:to-primary-blue
-                      "
+                    class=""
                   >
                     {post.frontmatter.title}
                   </a>
                 )}
               </div>
-              <div class="hidden text-text-muted text-sm italic pt-4">
+              <div class="text-text-muted text-sm italic pt-4">
                 <time datetime={post.frontmatter.date.toISOString()}>
-                  {formattedDate}
+                  updated: {formattedDate}
                 </time>
               </div>
             </li>

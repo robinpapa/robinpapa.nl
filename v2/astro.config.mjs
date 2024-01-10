@@ -1,9 +1,8 @@
 /* eslint-disable turbo/no-undeclared-env-vars */
 import { defineConfig } from "astro/config";
+import vercel from '@astrojs/vercel/static';
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
-import { defineConfig } from 'astro/config';
-import vercel from '@astrojs/vercel/static';
 
 /* 
   We are doing some URL mumbo jumbo here to tell Astro what the URL of your website will be.

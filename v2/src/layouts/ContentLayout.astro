@@ -43,22 +43,20 @@ const formattedDate = new Date(date).toLocaleDateString("en-us", {
 
   <body class="max-w-3xl mx-auto min-h-screen sm:px-16 sm:py-4">
     <Header />
-    <h1 class="text-xl pt-4 pb-2 overflow-hidden">
-      <!-- <span
-        class="
-            bg-gradient-to-bl bg-no-repeat bg-bottom bg-[length:90%_40%]
-            from-primary-blue to-primary-blue dark:from-primary-blue dark:to-primary-blue
-        "
-      > -->
-      <span class="leading-normal">Favorites</span>
-    </h1>
-    <h2>{title}</h2>
-    <main id="main" class="mt-8">
-      <slot name="content" />
-    </main>
-    <Footer />
-    <style>
-      
-    </style>
+    <div class="staggering">
+      <h1 class="text-3xl pt-4 pb-2 overflow-hidden stagger-unit" style="--stagger: 0">
+            <span class="leading-normal">
+              Favorites.
+            </span>
+          </h1>
+      <h2 class="stagger-unit" style="--stagger: 1">{title}</h2>
+      <main id="main" class="mt-8 stagger-unit" style="--stagger: 2">
+        <slot name="content" />
+      </main>
+      <Footer />
+      <style>
+        
+      </style>
+    </div>
   </body>
 </html>
