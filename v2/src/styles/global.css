@@ -96,16 +96,16 @@
     /* Animations */
     .staggering .stagger-unit {
         opacity: 0;
-        transform: translateY(20px);
+        transform: perspective(12000px);
         transition-property: opacity, transform;
-        transition-duration: 0.3s;
-        transition-timing-function: cubic-bezier(0.750, -0.015, 0.565, 1.055);
+        transition-duration: 0.4s;
     }
     
     .loaded .stagger-unit {
         opacity: 1;
-        transform: translateY(0);
-        transition-delay: calc(0.050s * var(--stagger));
+        transform: perspective(0px);
+        transition-delay: calc(0.035s * var(--stagger));
+        transition-timing-function: cubic-bezier(0.750, -0.015, 0.565, 1.055);
     }
 
     em {
@@ -116,7 +116,9 @@
 
     h1 {
         font-family: theme('fontFamily.body');
-        /* font-weight: 400; */
+        color: transparent;
+        background-clip: text;
+        background-image: radial-gradient(138.06% 1036.51% at 95.25% -2.54%,#7ed4fd 14.06%,#709df7 51.02%,#4d78ef 79.09%);
     }
     h2,
     h3,
@@ -127,10 +129,12 @@
         color: theme('colors.text.heading');
     }
 
-    h1 {
-        color: transparent;
-        background-clip: text;
+    .theme-bubblegum.dark h1 {
         background-image: radial-gradient(138.06% 1036.51% at 95.25% -2.54%,#7ed4fd 14.06%,#709df7 51.02%,#4d78ef 79.09%);
+    }
+
+    .theme-bubblegum.light h1 {
+        background-image: radial-gradient(138.06% 1036.51% at 95.25% -2.54%,#4d78ef 14.06%,#4d78ef 51.02%,#4d78ef 79.09%);
     }
 
     h2 {

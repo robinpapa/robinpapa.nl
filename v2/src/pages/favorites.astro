@@ -18,16 +18,18 @@ const sortedPosts = posts
 <PageLayout>
   <PageMeta title={`Blog | ${SITE_TITLE}`} slot="meta" />
   <section slot="title">Favorites.</section>
-  <section slot="main" class="stagger-unit" style="--stagger: 2">
+  <section slot="main" class="stagger-unit" style="--stagger: 1">
     <h2>A collection of useful apps and websites</h2>
     <p>
       Whenever I run into startups, apps or tools related to the categories
       below, I'll add them to the list. I hope it helps you to work on
       innovative opportunities.
     </p>
-    <ul class="mt-4">
+  </section>
+  <section slot="main">
+    <ul class="mt-4 staggering">
       {
-        sortedPosts.map((post) => {
+        sortedPosts.map((post, index) => {
           const formattedDate = new Date(
             post.frontmatter.date
           ).toLocaleDateString("en-us", {
@@ -36,7 +38,7 @@ const sortedPosts = posts
             day: "numeric",
           });
           return (
-            <li class="grid grid-cols-[1fr] md:grid-cols-[1fr_auto] mb-3 md:gap-2 items-start">
+            <li class="grid grid-cols-[1fr] md:grid-cols-[1fr_auto] mb-3 md:gap-2 items-start stagger-unit" style={`--stagger: ${index + 2}`}>
               <div class="title">
                 {post.frontmatter.external ? (
                   <a

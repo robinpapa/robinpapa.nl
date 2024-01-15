@@ -1,7 +1,13 @@
+---
+// import the Image component and the image
+import { Image } from 'astro:assets';
+import avatar from "../assets/photo_small.jpg"; // Image is 128x85
+---
+
 <Fragment>
-  <div class="avatar ">
-    <a href="/">
-      <img src="/public/images/avatar_robinpapa.jpg"/>
+  <div class="avatar">
+    <a class="unset" href="/">
+      <Image src={avatar} alt="A photo of Robin smiling." />
     </a>
   </div>
 </Fragment>
@@ -13,11 +19,11 @@
   .avatar {
         width: 64px;
         height: 64px;
-        float: left;
+        /* float: left; */
     }
 
     .avatar img {
-        border-radius: 50%;
+        border-radius: 10%;
         object-fit: cover;
         width: 100%;
         height: 100%;

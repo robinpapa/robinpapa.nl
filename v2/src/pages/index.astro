@@ -1,13 +1,42 @@
 ---
 import PageMeta from "../components/PageMeta.astro";
 import PageLayout from "../layouts/PageLayout.astro";
-import Intro from "../components/Intro.astro";
 import { SITE_TITLE } from "../config";
 ---
 
 <PageLayout>
   <PageMeta title={`${SITE_TITLE}`} slot="meta" />
-  <Fragment slot="main">
-    <Intro />
+  <Fragment slot="main" class="staggering">
+    <section class="mb-8 stagger-unit loaded" style="--stagger: 0;">
+      <h1 class="text-3xl pt-4 pb-2 overflow-hidden">
+        <span class="leading-normal">
+          Hello, I'm Robin.
+        </span>
+      </h1>
+      <div>
+        <h2 class="">
+          <span class="inline-block leading-normal">I combine business processes with technology.</span>
+          <span class="inline-block leading-normal">Also, I enjoy learning, testing and improving stuff.</span>
+          </span>
+        </h2>
+      </div>
+    </section>
+    <section class="mb-8 stagger-unit loaded" style="--stagger: 2;">
+      <div class="mt-8">
+        <h3>How I add value.</h3>
+        <p class="mb-4">
+          In daily life, I combine technology with process optimization to allow people in organization to fulfill their potential. 
+        </p>
+        <p>
+          I believe in utilizing technology for tasks that don't inspire passion, enabling us to redirect our focus towards creating real value.
+        </p>
+      </div>
+      <div class="mt-6">
+        <h3 class="">Learn more about me.</h3>
+        <p class="text-s mb-4">
+          Discover what I'm working on <a href="/now/">now</a> or learn more <a href="/about/">about me</a>. 
+        </p>
+      </div>
+    </section>
   </Fragment>
 </PageLayout>
