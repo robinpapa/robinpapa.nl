@@ -3,7 +3,7 @@ import PageMeta from "../components/PageMeta.astro";
 import PageLayout from "../layouts/PageLayout.astro";
 import { SITE_TITLE } from "../config";
 
-const lastUpdated = "29 Nov, 2023";
+const lastUpdated = "18 Jan, 2024";
 ---
 
 <PageLayout>
@@ -15,14 +15,14 @@ const lastUpdated = "29 Nov, 2023";
          
           <span class="leading-normal"> Now.</span>
         </h1>
-        <p class="text-s">
+        <p class="text-sm">
           Last updated: {lastUpdated}. &mdash; <a
             href="https://nownownow.com/about">What is a now page?</a
           >
         </p>
       </div>
       <div class="stagger-unit" style="--stagger: 1">
-        <h3 class="">Now</h3>
+        <h3 class="">Now.</h3>
         <p class="mb-5">
           I am currently working as an operational manager at <a
             href="https://www.froconsur.com">Froconsur</a
@@ -30,19 +30,19 @@ const lastUpdated = "29 Nov, 2023";
           and application development.
         </p>
         <ul>
-          <li>Reading some books about astrophysics and philosophy.</li>
+          <li>Currently Reading: <a href="https://literal.club/book/the-end-of-everything-02ocg">The End of Everything (Astrophysically Speaking) &mdash; Katie Mack</a></li>
           <li>
-            Creating and posting useful content on social media. &mdash;
-            Objective: 150 posts.
+            Creating and posting useful technology content on social media. &mdash;
+            Objective: 150 snippets of content in 2024.
           </li>
-          <li>Figure out video editing.</li>
+          <li>Dabbling in video editing with DaVinci Resolve, but I'm contemplating to use Adobe Premiere.</li>
           <li>Getting into the habit of using ChatGTP for shaping thoughts.</li>
         </ul>
       </div>
       <div class="stagger-unit" style="--stagger: 2">
         <h3 class="mt-8">Recently.</h3>
         <ul>
-          <!-- <li>Athene bezoeken</li> -->
+          <li>I finished reading <a href="https://literal.club/book/meghan-ogieblyn-god-human-animal-machine-2mxgl">God, Human, Animal, Machine &mdash; Meghan O'Gieblyn</a> and it's one of the best books I've read in a long time.</li>
           <li>
             I launched this website and I'm happy with the outcome! Now I have a
             place to share my thoughts and findings.
@@ -52,8 +52,8 @@ const lastUpdated = "29 Nov, 2023";
       <div class="stagger-unit" style="--stagger: 2">
         <h3 class="mt-8">Future Plans.</h3>
         <ul>
-          <!-- <li>Naar St. Maarten</li> -->
-          <li>Coming soon!</li>
+          <li>Visit the island of St. Martin in the Caribbean, as <a href="https://www.foodiearanka.nl">Aranka</a> grew up there.</li>
+          <li>Create a separate currently reading + finished reading section, and retrieve that info via the <a href="https://literal.club/pages/api">Literal.club API</a>.</li>
         </ul>
       </div>
     </section>
