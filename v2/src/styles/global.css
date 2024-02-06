@@ -85,7 +85,7 @@
         background-color: theme('colors.bg.body');
         color: theme('colors.text.body');
         /* base font-size 1px larger for better visibility */
-        font-size: 1em;
+        font-size: 1.12em;
         line-height: 1.85;
         scroll-behavior: smooth;
         text-rendering: optimizelegibility;
@@ -118,7 +118,7 @@
         font-family: theme('fontFamily.body');
         color: transparent;
         background-clip: text;
-        background-image: radial-gradient(138.06% 1036.51% at 95.25% -2.54%,#7ed4fd 14.06%,#709df7 51.02%,#4d78ef 79.09%);
+        background-image: radial-gradient(138.06% 1036.51% at 95.25% -2.54%,#7ed4fd 14.06%,#00C2FF 51.02%,#00C2FF 79.09%);
     }
     h2,
     h3,
