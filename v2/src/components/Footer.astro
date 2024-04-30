@@ -1,10 +1,14 @@
 ---
-const currentYear = '2024';
+import DarkModeToggle from "./DarkModeToggle.astro";
+
+const currentYear = new Date().getFullYear();
 ---
 
-<footer class="text-xs leading-[1.75] mt-4 staggering">
+  <footer class="text-xs leading-[1.75] mt-4 pb-4 staggering">
+  <DarkModeToggle />
+
   <div class="stagger-unit" style="--stagger: 10;">
-   &copy; {currentYear} Robin Papa
+   &copy; {currentYear} SuperWork
   </div>
 </footer>
 

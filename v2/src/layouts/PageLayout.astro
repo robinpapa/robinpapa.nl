@@ -9,36 +9,31 @@ import FontAwesome from "./FontAwesome.astro";
 import ThemeScript from "./ThemeScript.astro";
 import Favicon from "./Favicon.astro";
 import Header from "../components/Header.astro";
+import Leader from "../components/Leader.astro";
+import Banner from "../components/Banner.astro";
 import Footer from "../components/Footer.astro";
 ---
 
 <!DOCTYPE html>
-<html class="theme-bubblegum" lang="en">
+<html class="theme-main" lang="en">
   <head>
-    <!-- Global Metadata -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="generator" content="Blogster" />
-    <Favicon />
     <slot name="meta" />
+    <Favicon />
     <GoogleFont />
     <ThemeScript />
-    <!-- <FontAwesome /> -->
-    
   </head>
 
-  <body class="max-w-3xl mx-auto min-h-screen px-4 lg:px-16 py-4 lg:py-8">
-    <Header />
-      <div class="staggering">
-        <h1 class="text-3xl pt-4 pb-2 overflow-hidden stagger-unit" style="--stagger: 0">
-          <span class="leading-normal">
-            <slot name="title" />
-          </span>
-        </h1>
-        <main id="main">
-          <slot name="main" />
-        </main>
-      </div>
-    <Footer />
+  <body class="max-w-screen-xl mx-24  min-h-screen">
+    <div class="border border-solid border-x-1 border-y-0 rounded-b-2xl mb-4">
+      <Header />
+      <Leader />
+      <!-- <Banner /> -->
+      <main id="main">
+        <slot name="main" />
+      </main>
+      <Footer />
+    </div>
   </body>
 </html>

@@ -1,7 +1,6 @@
 ---
 import Avatar from "./Avatar.astro";
 import Nav from "./Nav.astro";
-import DarkModeToggle from "./DarkModeToggle.astro";
 ---
 
 <script> 
@@ -11,10 +10,26 @@ import DarkModeToggle from "./DarkModeToggle.astro";
   });
 </script>
 
-<header class="mt-8 mb-12 flex justify-start justify-items-stretch gap-x-12">
-  <Avatar class="" />
-  <Nav class="" />
-  <!-- <DarkModeToggle /> -->
+<header id="header" class="px-8 lg:px-8 py-8 border border-solid border-x-0 border-t-0 border-b-1">
+  <h1 class="text-l">
+    <a href="/" class="title">
+      <span class="block py-0">Robin Papa</span> <span class="subtitle hidden">Freelance Technology Consultant</span> 
+      <!-- <span class="block py-0">SuperWork</span> <span class="subtitle hidden">Automation Agency</span>  -->
+    </a>
+
+    <!-- <span class="block subtitle">Innovation Studio</span> -->
+    
+    <!--  Gen AI has started as a copilot technology and may evolve to become an automated pilot for some tasks. 
+          This essentially means everyone will have a utility belt of AI superpowers,
+          creating a workforce of “superworkers”.
+          Tech breakthroughs have increased productivity and created both different and more work for humans.
+          For this reason, companies need to shift their focus to human breakthroughs
+          in learning, reskilling, upskilling, and career management to enable their workforce
+          to best take advantage of gen AI and other technologies.
+    -->
+  </h1>
+  <!-- <Avatar class="" /> -->
+  <!-- <Nav class="" /> -->
 </header>
 
 

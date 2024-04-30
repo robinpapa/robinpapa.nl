@@ -2,43 +2,55 @@
 import PageMeta from "../components/PageMeta.astro";
 import PageLayout from "../layouts/PageLayout.astro";
 import { SITE_TITLE } from "../config";
+import ServiceBlocks from "src/components/ServiceBlocks.astro";
+import Method from "src/components/Method.astro";
 ---
 
 <PageLayout>
   <PageMeta title={`${SITE_TITLE}`} slot="meta" />
   <Fragment slot="main" class="staggering">
-    <section class="mb-8 stagger-unit loaded" style="--stagger: 0;">
-      <h1 class="text-3xl pt-0 pb-2 overflow-hidden">
-        <span class="leading-normal">
-          Hello, I'm Robin.
-        </span>
-      </h1>
-      <div>
-        <h2 class="">
-          <span class="inline-block leading-normal pt-4">Most teams struggle with not having enough time to think strategically, work creatively and deliver innovative solutions.</span>
-          <span class="inline-block leading-normal pt-4">I help those teams gain the skills and tools to create more time and space to work on the important things. And automate the rest.</span>
-          <!-- <span class="inline-block leading-normal">I combine business processes with technology.</span> -->
-          <!-- <span class="inline-block leading-normal">Also, I enjoy learning, testing and improving stuff.</span> -->
-          </span>
-        </h2>
-      </div>
-    </section>
-    <section class="mb-8 stagger-unit loaded" style="--stagger: 2;">
-      <div class="mt-12">
-        <h3>How I add value.</h3>
-        <p class="mb-4">
-          In daily life, I combine technology with process optimization to allow people in organizations to fulfill their potential. 
-        </p>
+    <Method />
+    <!-- <h3 class="pt-4">
+      <span class="inline-block leading-normal mt-8 pb-4">De wereld verandert razendsnel. </span>
+    </h3>
+    <p>Om relevant te blijven moet je innoveren. Maar daar heb je geen tijd voor. Je wil processen automatiseren zodat jouw team kan bouwen aan innovatieve diensten en producten.</p> -->
+      <!-- <section class="mb-8 stagger-unit loaded" style="--stagger: 2;">
+        <h3 class="pt-4">
+          <span class="inline-block leading-normal mt-8 pb-4">Als jouw team een voordeel zou hebben door beter gebruik te maken van data en automatisering, waarom krijgt het dan niet meer aandacht?</span>
+        </h3>
         <p>
           I believe in utilizing technology for tasks that don't inspire passion, enabling us to redirect our focus towards creating real value.
         </p>
       </div>
+    </section> -->
+<!-- 
+    <section class="stagger-unit loaded" style="--stagger: 2;">
+      <h3>
+        <span class="inline-block leading-normal mt-6 pb-4">De wereld verandert razendsnel. </span>
+      </h3>
+
+
+    </section>
+    <section class="stagger-unit" style="--stagger: 4;">
+      <h3 class="">
+        <span class="inline-block leading-normal mt-8 pb-4">Als jouw concurrent vandaag start, dan automatiseert hij meteen wat jij handmatig uitvoert.</span>
+      </h3>
+      <div class="mt-0">
+        Stel je eens voor dat je team de tijd heeft om te bouwen aan innovatieve diensten en producten, terwijl saaie, repetitieve taken automatisch worden uitgevoerd. Met mijn aanpak van projecten van 3-6 weken, gericht op business technologie en procesinnovatie, kunnen we samen efficiënte workflows creëren zonder het grotere plaatje uit het oog te verliezen.
+        <p class="mb-4">
+          <span class="font-bold inline-block pt-2">Wat ik doe:</span> projecten van 3-6 weken waarbij we business technologie inzetten voor procesinnovatie en efficiënte workflows.
+          <span class="font-bold inline-block pt-2">Wat ik niet doe:</span> automatiseren zonder naar het geheel te kijken.
+        </p>
+        
+      </div>
       <div class="mt-8">
-        <h3 class="">Learn more about me.</h3>
+         <h3 class="">Expertisegebieden.</h3> 
         <p class="text-s mb-12">
-          Discover what I'm working on <a href="/now/">now</a> or learn more <a href="/about/">about me</a>. 
+          Ik ontwerp en implementeer moderne processen door inzet van:
         </p>
       </div>
-    </section>
+    </section> -->
+    <!-- <a class="cta" href="https://cal.com/robinpapa">Maak snel een vrijblijvende afspraak →</a> -->
+    
   </Fragment>
 </PageLayout>
