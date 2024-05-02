@@ -2,14 +2,16 @@
 import PageMeta from "../components/PageMeta.astro";
 import PageLayout from "../layouts/PageLayout.astro";
 import { SITE_TITLE } from "../config";
-import ServiceBlocks from "src/components/ServiceBlocks.astro";
+import Services from "src/components/Services.astro";
 import Method from "src/components/Method.astro";
 ---
 
 <PageLayout>
   <PageMeta title={`${SITE_TITLE}`} slot="meta" />
   <Fragment slot="main" class="staggering">
-    <Method />
+    <!-- <Method /> -->
+    <Services />
+
     <!-- <h3 class="pt-4">
       <span class="inline-block leading-normal mt-8 pb-4">De wereld verandert razendsnel. </span>
     </h3>

@@ -1,64 +1,56 @@
 <!DOCTYPE html><html class="theme-main" lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><!-- Primary Meta Tags --><title>Robin Papa | Workflow Architect</title><meta name="title" content="Robin Papa | Workflow Architect"><meta name="description" content="Robin develops applications for every business process."><!-- Open Graph / Facebook --><meta property="og:title" content="Robin Papa | Workflow Architect"><meta property="og:description" content="Robin develops applications for every business process."><meta property="og:type" content="website"><meta property="og:url" content="https://www.robinpapa.nl"><meta property="og:image:alt" content="My fancy website"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><!-- Twitter --><meta property="twitter:title" content="Robin Papa | Workflow Architect"><meta property="twitter:description" content="Robin develops applications for every business process."><meta property="twitter:card" content="summary_large_image"><meta property="twitter:image:alt" content="My fancy website"><!-- {twitter.url && <meta property="twitter:url" content={twitter.url} />} --><meta name="theme-color" content="#ffffff"><!-- 
   This is an example. 
   Use https://realfavicongenerator.net to generate the icons and manifest. 
---><link href="/favicon.ico" rel="shortcut icon"><link rel="preload" href="/fonts/ibm-plex-sans-v19-latin-regular.woff2" as="font" type="font/woff2" crossorigin="crossorigin"><style>
-    /* space-grotesk-regular - latin */
-    /* ibm-plex-sans-200 - latin */
-    @font-face {
-      font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-      font-family: "IBM Plex Sans";
-      font-style: normal;
-      font-weight: 200;
-      src: url("../fonts/ibm-plex-sans-v19-latin-200.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-    }
-
-    /* ibm-plex-sans-300 - latin */
-    @font-face {
-      font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-      font-family: "IBM Plex Sans";
-      font-style: normal;
-      font-weight: 300;
-      src: url("../fonts/ibm-plex-sans-v19-latin-300.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-    }
-
-    /* ibm-plex-sans-regular - latin */
-    @font-face {
-      font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-      font-family: "IBM Plex Sans";
-      font-style: normal;
-      font-weight: 400;
-      src: url("../fonts/ibm-plex-sans-v19-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-    }
-
-    /* ibm-plex-sans-500 - latin */
-    @font-face {
-      font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-      font-family: "IBM Plex Sans";
-      font-style: normal;
-      font-weight: 500;
-      src: url("../fonts/ibm-plex-sans-v19-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-    }
-  </style><script>
-  // figure out user's preferred theme and set it as html class for tailwind before paint
-  (function () {
-    if (typeof window !== "undefined") {
-      const isSystemColorSchemeDark = window.matchMedia(
-        "(prefers-color-scheme: dark)"
-      ).matches;
-      const storageTheme = sessionStorage.getItem("theme");
-      if (!storageTheme && isSystemColorSchemeDark) {
-        document.documentElement.classList.add("dark");
-        document.head.children.namedItem("theme-color").content = "#0f172a";
-      } else if (storageTheme === "dark") {
-        document.documentElement.classList.add("dark");
-        document.head.children.namedItem("theme-color").content = "#0f172a";
-      } else {
-        // we already server render light theme
-        document.head.children.namedItem("theme-color").content = "#ffffff";
+--><link href="/favicon.ico" rel="shortcut icon"><link rel="preload" href="/fonts/figtree-v5-latin-regular.woff2" as="font" type="font/woff2" crossorigin="crossorigin"><link rel="preload" href="/fonts/figtree-v5-latin-italic.woff2" as="font" type="font/woff2" crossorigin="crossorigin"><link rel="preload" href="/fonts/figtree-v5-latin-500.woff2" as="font" type="font/woff2" crossorigin="crossorigin"><link rel="preload" href="/fonts/figtree-v5-latin-600.woff2" as="font" type="font/woff2" crossorigin="crossorigin"><link rel="preload" href="/fonts/figtree-v5-latin-700.woff2" as="font" type="font/woff2" crossorigin="crossorigin"><link rel="preload" href="/fonts/figtree-v5-latin-800.woff2" as="font" type="font/woff2" crossorigin="crossorigin"><style>
+    /* figtree-regular - latin */
+      @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Figtree';
+        font-style: normal;
+        font-weight: 400;
+        src: url('../fonts/figtree-v5-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
       }
-    }
-  })();
-</script><link rel="stylesheet" href="/_astro/index.C9KM_GkP.css" /><script type="module">document.addEventListener("DOMContentLoaded",function(){document.body.className+=" loaded"});function i(o){document.head.querySelector('meta[name="theme-color"]')}function a(o){sessionStorage.setItem("theme","light")}class c extends HTMLElement{constructor(){super();let s=document.documentElement.classList.contains("dark")?"dark":"light";const d=this.querySelector("button"),e=d?.querySelector("#mode-circle");e&&(s==="dark"&&(e.classList.remove("light"),e.classList.add("dark")),e.classList.remove("invisible"),d?.addEventListener("click",()=>{if(s==="dark"){const t="light";e.classList.remove("dark"),e.classList.add("light"),i(),a(t),s=t}else{const t="dark";e.classList.remove("light"),e.classList.add("dark"),i(),a(t),s=t}e.classList.contains("duration-300")||e.classList.add("duration-300")}))}}customElements.define("mode-toggle",c);
+      /* figtree-italic - latin */
+      @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Figtree';
+        font-style: italic;
+        font-weight: 400;
+        src: url('../fonts/figtree-v5-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      }
+      /* figtree-500 - latin */
+      @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Figtree';
+        font-style: normal;
+        font-weight: 500;
+        src: url('../fonts/figtree-v5-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      }
+      /* figtree-600 - latin */
+      @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Figtree';
+        font-style: normal;
+        font-weight: 600;
+        src: url('../fonts/figtree-v5-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      }
+      /* figtree-700 - latin */
+      @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Figtree';
+        font-style: normal;
+        font-weight: 700;
+        src: url('../fonts/figtree-v5-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      }
+      /* figtree-800 - latin */
+      @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Figtree';
+        font-style: normal;
+        font-weight: 800;
+        src: url('../fonts/figtree-v5-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      }
+  </style><link rel="stylesheet" href="/_astro/index.x6PzZMpE.css" /><script type="module">document.addEventListener("DOMContentLoaded",function(){document.body.className+=" loaded"});
 </script>
 <script type="module" src="/_astro/page.tdlkyGlf.js"></script>
 <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
@@ -67,31 +59,19 @@
 		script.src = '/_vercel/insights/script.js';
 		var head = document.querySelector('head');
 		head.appendChild(script);
-	</script></head> <body class="max-w-screen-xl mx-24  min-h-screen"> <div class="border border-solid border-x-1 border-y-0 rounded-b-2xl mb-4">  <header id="header" class="px-8 lg:px-8 py-8 border border-solid border-x-0 border-t-0 border-b-1"> <h1 class="text-l"> <a href="/" class="title"> <span class="block py-0">Robin Papa</span> <span class="subtitle hidden">Freelance Technology Consultant</span> <!-- <span class="block py-0">SuperWork</span> <span class="subtitle hidden">Automation Agency</span>  --> </a> <!-- <span class="block subtitle">Innovation Studio</span> --> <!--  Gen AI has started as a copilot technology and may evolve to become an automated pilot for some tasks. 
+	</script></head> <body class="max-w-screen-xl mx-auto min-h-screen"> <div class="border border-solid border-x-1 border-t-0 rounded-b-2xl mb-4 p0">  <header id="header" class="flex justify-between px-4 lg:px-4 py-8 border border-solid border-x-0 border-t-0 border-b-1"> <h1 class=" align-middle py-2"> <a href="/" class="title menu-item rounded-lg px-4 py-2"> <span class="text-sky-950">Robin Papa</span> <!-- <span class="block py-0">SuperWork</span> <span class="subtitle hidden">Automation Agency</span>  --> </a> <!-- <span class="block subtitle">Innovation Studio</span> --> <!--  Gen AI has started as a copilot technology and may evolve to become an automated pilot for some tasks. 
           This essentially means everyone will have a utility belt of AI superpowers,
           creating a workforce of “superworkers”.
           Tech breakthroughs have increased productivity and created both different and more work for humans.
           For this reason, companies need to shift their focus to human breakthroughs
           in learning, reskilling, upskilling, and career management to enable their workforce
           to best take advantage of gen AI and other technologies.
-    --> </h1> <!-- <Avatar class="" /> --> <!-- <Nav class="" /> --> </header> <section id="leader" class="py-32 px-8 lg:px-8 border border-solid border-x-0 border-t-0 border-b-1"> <section class="stagger-unit loaded" style="--stagger: 0;"> <div class="w-4/5 lg:w-3/5"> <h2 class=""> <span class="inline-block pb-0"><strong>Versterk jouw innovatiepositie</strong> <span><br> met slimme business technologie</span> </span></h2> <p class="pt-4 pb-8 text-slate-600">
-Veel teams besteden tijd aan herhalend werk, waardoor ze minder tijd hebben
-        voor klantbeleving, innovatie en strategie. Doe waardevol werk. <i>En automatiseer de rest.</i> </p> <a class="cta unset px-4 py-2 bg-sky-950 text-sky-100 hover:text-sky-700 hover:bg-sky-200 rounded-full" href="https://cal.com/robinpapa">Maak een vrijblijvende afspraak →</a> </div> <div></div> </section> </section> <!-- <Banner /> --> <main id="main">  <div class="grid grid-cols-3 border border-solid border-t-0 border-x-0 border-b-1" data-astro-cid-gkk5ym2j><div class="col-span-1 h-64 border border-solid border-y-0 border-l-0 p-8" data-astro-cid-gkk5ym2j><h3 class="text-xl" data-astro-cid-gkk5ym2j>Human-First Automatisering</h3><p data-astro-cid-gkk5ym2j>Volgt z.s.m.!</p></div><div class="col-span-1 h-64 border border-solid border-y-0 border-l-0 p-8" data-astro-cid-gkk5ym2j><h3 class="text-xl" data-astro-cid-gkk5ym2j>Ontwerp</h3><p data-astro-cid-gkk5ym2j>Volgt z.s.m.!</p></div><div class="col-span-1 h-64 p-8" data-astro-cid-gkk5ym2j><h3 class="text-xl" data-astro-cid-gkk5ym2j>Implementatie</h3><p data-astro-cid-gkk5ym2j>Volgt z.s.m.!</p></div><!-- <div class="col-span-1">
-      <div class="bg-gray-200 h-48 rounded-lg overflow-hidden shadow-lg relative">
-        <img src="image3.jpg" alt="image3" class="w-full h-3/4 object-cover">
-        <div class="p-4 absolute bottom-0">
-          <h4 class="text-m font-semibold">Title 3</h4>
-          <p class="text-gray-600">Some text here</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-span-1">
-      <div class="bg-gray-200 h-48 rounded-lg overflow-hidden shadow-lg relative">
-        <img src="image4.jpg" alt="image4" class="w-full h-3/4 object-cover">
-        <div class="p-4 absolute bottom-0">
-          <h4 class="text-m font-semibold">Title 4</h4>
-          <p class="text-gray-600">Some text here</p>
-        </div>
-      </div> --></div>       </main> <footer class="text-xs leading-[1.75] mt-4 pb-4 staggering" data-astro-cid-sz7xmlte> <mode-toggle class="" data-astro-cid-tcsrer47> <button class="justify-self bg-black dark:bg-white ml-4 mt-0 inline-flex h-6 w-11 items-center rounded-full" id="mode-toggle" role="switch" type="button" tabindex="0" aria-checked="false" data-headlessui-state="" data-astro-cid-tcsrer47><span class="sr-only" data-astro-cid-tcsrer47>Toggle dark mode</span><span id="mode-circle" class="light inline-block h-4 w-4 rounded-full bg-gradient-to-tr invisible" data-astro-cid-tcsrer47><span class="absolute top-0 left-0 w-[10px] h-[10px] rounded-full bg-gray-700 scale-[0]" data-astro-cid-tcsrer47></span> </span> </button> </mode-toggle>   <div class="stagger-unit" style="--stagger: 10;" data-astro-cid-sz7xmlte>
-&copy; 2024 SuperWork
+    --> </h1> <!-- <Avatar class="" /> --> <nav class="hidden md:flex"><section class="flex items-center text-text-bold"><ul class="unset flex gap-4"><!-- <li class="menu-item rounded-lg align-middle px-4 py-1"><HeaderLink href="/about/">Over</HeaderLink></li> --><!-- <li class="menu-item rounded-lg align-middle px-4 py-1"><HeaderLink href="/">Diensten</HeaderLink></li> --><li class="menu-item rounded-lg align-middle px-4 py-1"><!-- DO NOT FORMAT. IT ADDS AN EXTRA SPACE ON RENDERED CONTENT. --><a data-astro-prefetch href="https://cal.com/robinpapa" class="unset">Koffie?</a></li></ul></section></nav> </header> <section id="leader" class="py-32 px-8 lg:px-8 border border-solid border-x-0 border-t-0 border-b-1 dots"> <div class="inline-block mb-6 px-3 py-1 text-sm bg-green-200 text-green-600 rounded-full">
+Beschikbaar
+</div> <div class="w-4/5 lg:w-4/5"> <h2 class=""> <span class="inline-block pb-8 text-sky-950"><strong>Ik implementeer bedrijfstechnologie,</strong> <br>volledig afgestemd op jouw bedrijfsproces.</span> <!-- <span class="inline-block pb-8 text-sky-950"><strong>Versterk jouw innovatiepositie</strong> 
+        <br/> met slimme business technologie</span> --> </h2> <p class="pb-8 text-slate-600">
+Als software en technologie niet aansluiten op processen, dan wordt er minder aandacht geschonken aan
+        klantbeleving, innovatie en strategie. Is dat niet jammer? Laat technologie <i>voor jou</i> werken.
+<!-- Doe waardevol werk. <i>En automatiseer de rest.</i> --> </p> <a class="button unset px-4 py-2 border border-slate-200 bg-slate-50 text-slate-600 rounded-full" href="https://cal.com/robinpapa">Maak een vrijblijvende afspraak →</a> </div> </section> <!-- <Intro /> --> <!-- <Quote /> --> <!-- <Logos /> --> <!-- <Banner /> --> <main id="main">   <div class="grid grid-cols-3 border border-solid border-t-0 border-x-0 border-b-1"><div class="col-span-1 h-64 border border-solid border-y-0 border-l-0 p-8 pb-1"><h3 class="text-xl pb-4">Jouw partner voor business technology</h3><p class="text-sm pb-4">Ik verbind technologie met de onmisbare creativiteit van jouw team. Zo versterken we de innovatiepositie en creëer je elke dag meer waarde voor jouw klanten.</p><p class="text-sm">Ik ben er voor het Nederlandse klein- en middenbedrijf dat voorop wil lopen en voor de organisatie waar men begrijpt dat op den duur elk bedrijf een IT-bedrijf wordt.</p></div><div class="col-span-1 h-64 border border-solid border-y-0 border-l-0 p-8 dots"><h3 class="text-xl pb-4">Analyseren, adviseren & implementeren</h3><p class="text-sm pb-4">Ik breng bedrijfskunde en bedrijfstechnologie samen, zodat jouw organisatie kan doen waar het goed in is.</p><p class="text-sm pb-4">Je hebt geen grote IT-partners nodig: kleine projecten maken een wereld van verschil.</p><p class="text-sm">Van workshops tot procesontwerp, van ontwikkeling tot implementatie &mdash; ik begeleid het gehele proces.</p></div><div class="col-span-1 h-64 border border-solid border-y-0 border-l-0 p-8"><h3 class="text-xl pb-4">Innoveren &amp; begeleiden</h3><p class="text-sm pb-4">Technologische vooruitgang kan niet plaatsvinden zonder de onmisbare creativiteit van jouw medewerkers.</p><p class="text-sm">Ik neem iedere belanghebbende mee in het ontwerpproces en ik deel mijn kennis zodat de innovatiepositie van jouw organisatie versterkt wordt.</p></div></div>      </main> <footer class="text-xs text-slate-600 px-8 py-8 staggering" data-astro-cid-sz7xmlte> <div class="stagger-unit" style="--stagger: 10;" data-astro-cid-sz7xmlte>
+&copy; 2024 Robin Papa
 </div> </footer>  </div> </body></html>

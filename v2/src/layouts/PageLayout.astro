@@ -5,11 +5,13 @@
 import "../styles/global.css";
 
 import GoogleFont from "./GoogleFont.astro";
-import FontAwesome from "./FontAwesome.astro";
-import ThemeScript from "./ThemeScript.astro";
 import Favicon from "./Favicon.astro";
 import Header from "../components/Header.astro";
 import Leader from "../components/Leader.astro";
+import Intro from "../components/Intro.astro";
+import Quote from "../components/Quote.astro";
+import Logos from "../components/Logos.astro";
+import Services from "../components/Services.astro";
 import Banner from "../components/Banner.astro";
 import Footer from "../components/Footer.astro";
 ---
@@ -22,13 +24,16 @@ import Footer from "../components/Footer.astro";
     <slot name="meta" />
     <Favicon />
     <GoogleFont />
-    <ThemeScript />
   </head>
 
-  <body class="max-w-screen-xl mx-24  min-h-screen">
-    <div class="border border-solid border-x-1 border-y-0 rounded-b-2xl mb-4">
+  <body class="max-w-screen-xl mx-auto min-h-screen">
+    <div class="border border-solid border-x-1 border-t-0 rounded-b-2xl mb-4 p0">
       <Header />
       <Leader />
+      <!-- <Intro /> -->
+      <!-- <Quote /> -->
+
+      <!-- <Logos /> -->
       <!-- <Banner /> -->
       <main id="main">
         <slot name="main" />

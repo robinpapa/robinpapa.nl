@@ -5,8 +5,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        body: ["IBM Plex Sans", "sans-serif"],
-        heading: ["IBM Plex Serif", "serif"],
+        body: ["Figtree", "Avenir", "Avenir Next", "sans-serif"],
+        heading: ["Figtree", "Avenir", "Avenir Next", "sans-serif"],
       },
       colors: {
         transparent: "transparent",
