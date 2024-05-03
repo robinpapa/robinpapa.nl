@@ -2,7 +2,7 @@
 // You can import this data from anywhere in your site by using the `import` keyword.
 
 export const SITE_TITLE = "Robin Papa | Business Technology Consultant";
-export const SITE_DESCRIPTION = "Robin develops applications for every business process."
+export const SITE_DESCRIPTION = "Robin implementeert bedrijfstechnologie, volledig afgestemd op jouw bedrijfsproces."
 export const MY_NAME = "Robin Papa";
 
 // setup in astro.config.mjs
