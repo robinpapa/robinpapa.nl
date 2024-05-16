@@ -1,0 +1,84 @@
+---
+import { readAll } from "../lib/markdoc/read";
+import { favorite } from "../lib/markdoc/frontmatter.schema";
+import PageLayout from "../layouts/PageLayout.astro";
+import PageMeta from "../components/PageMeta.astro";
+import { SITE_TITLE } from "../config";
+
+const posts = await readAll({
+  directory: "favorites",
+  frontmatterSchema: favorite,
+});
+
+const sortedPosts = posts
+  .filter((p) => p.frontmatter.draft !== true)
+  .sort((a, b) => a.frontmatter.title.localeCompare(b.frontmatter.title));
+---
+
+<PageLayout>
+  <PageMeta title={`Blog | ${SITE_TITLE}`} slot="meta" />
+  <section slot="title">Favorites.</section>
+  <section slot="main" class="stagger-unit" style="--stagger: 1">
+    <h2>I collect the most useful apps and websites. Enjoy!</h2>
+    
+    
+  </section>
+  <section class="mt-16 stagger-unit" style="--stagger: 2" slot="main">
+    <h3>Collections</h3>
+    <p>
+      Whenever I run into startups, apps or tools related to the categories
+      below, I'll add them to the list. I hope it helps you to work on
+      innovative opportunities.
+    </p>
+    <ul class="mt-4 staggering">
+      {
+        sortedPosts.map((post, index) => {
+          const formattedDate = new Date(
+            post.frontmatter.date
+          ).toLocaleDateString("en-us", {
+            year: "numeric",
+            month: "short",
+            day: "numeric",
+          });
+          return (
+            <li class="grid grid-cols-[1fr] md:grid-cols-[1fr_auto] mb-3 md:gap-2 items-start stagger-unit" style={`--stagger: ${index + 2}`}>
+              <div class="title">
+                {post.frontmatter.external ? (
+                  <a
+                    href={post.frontmatter.url}
+                    target="_blank"
+                    class="unset
+                        transition-[background-size] duration-300 
+                        bg-gradient-to-r bg-left-bottom bg-no-repeat
+                        bg-[length:0%_55%] hover:bg-[length:100%_55%] dark:bg-[length:0%_2px] hover:dark:bg-[length:100%_2px]
+                        from-primary-blue to-primary-blue dark:from-primary-blue dark:to-primary-blue
+                      "
+                  >
+                    <span>{post.frontmatter.title}</span>
+                    
+                    <span />
+                    <span>
+                      <i class="ml-1 mr-1 text-[12px] pb-2 fa-solid fa-up-right-from-square" />
+                    </span>
+                  </a>
+                ) : (
+                  <a
+                    href={`/favorites/${post.slug}`}
+                    class=""
+                  >
+                    {post.frontmatter.title}
+                  </a>
+                )}
+              </div>
+              <div class="text-text-muted text-sm italic pt-4">
+                <time datetime={post.frontmatter.date.toISOString()}>
+                  updated: {formattedDate}
+                </time>
+              </div>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </section>
+</PageLayout>

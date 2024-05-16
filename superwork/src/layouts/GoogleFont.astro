@@ -1,0 +1,116 @@
+---
+/*
+  This is not a layout but just a component that's used in page layouts.
+  Easiest way to use a Google font is to embed it as a <link>. But we're
+  gonna load fonts the fastest way.
+
+  Here's the formula for best font load performance.
+  1. Serve from same origin as woff/woff2
+  2. Load font @font-face definitions as inline styles in page <head>
+  3. Preload the same origin font URLs
+
+  Hosting providers like Netlify/Vercel automatically cache your
+  public assets (fonts) and serve from their CDN closest to the users.
+
+  Read more here to understand font load performance
+  https://sia.codes/posts/making-google-fonts-faster
+
+  woff/woff2 assets downloaded using google-webfonts-helper:
+  https://gwfh.mranftl.com/fonts/space-grotesk?subsets=latin
+*/
+---
+
+<Fragment>
+  <link
+    rel="preload"
+    href="/fonts/figtree-v5-latin-regular.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin="crossorigin"
+  />
+  <link
+    rel="preload"
+    href="/fonts/figtree-v5-latin-italic.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin="crossorigin"
+  />
+  <link
+    rel="preload"
+    href="/fonts/figtree-v5-latin-500.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin="crossorigin"
+  />
+  <link
+    rel="preload"
+    href="/fonts/figtree-v5-latin-600.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin="crossorigin"
+  />
+  <link
+    rel="preload"
+    href="/fonts/figtree-v5-latin-700.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin="crossorigin"
+  />
+  <link
+    rel="preload"
+    href="/fonts/figtree-v5-latin-800.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin="crossorigin"
+  />
+  <style is:inline>
+    /* figtree-regular - latin */
+      @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Figtree';
+        font-style: normal;
+        font-weight: 400;
+        src: url('../fonts/figtree-v5-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      }
+      /* figtree-italic - latin */
+      @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Figtree';
+        font-style: italic;
+        font-weight: 400;
+        src: url('../fonts/figtree-v5-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      }
+      /* figtree-500 - latin */
+      @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Figtree';
+        font-style: normal;
+        font-weight: 500;
+        src: url('../fonts/figtree-v5-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      }
+      /* figtree-600 - latin */
+      @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Figtree';
+        font-style: normal;
+        font-weight: 600;
+        src: url('../fonts/figtree-v5-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      }
+      /* figtree-700 - latin */
+      @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Figtree';
+        font-style: normal;
+        font-weight: 700;
+        src: url('../fonts/figtree-v5-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      }
+      /* figtree-800 - latin */
+      @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Figtree';
+        font-style: normal;
+        font-weight: 800;
+        src: url('../fonts/figtree-v5-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      }
+  </style>
+</Fragment>

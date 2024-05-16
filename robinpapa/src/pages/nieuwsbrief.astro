@@ -1,0 +1,14 @@
+---
+import PageMeta from "../components/PageMeta.astro";
+import PageLayout from "../layouts/PageLayout.astro";
+import { SITE_TITLE } from "../config";
+import Newsletter from "src/components/Newsletter.astro";
+---
+
+<PageLayout>
+  <PageMeta title={`${SITE_TITLE}`} slot="meta" />
+  <Fragment slot="main" class="staggering">
+    <Newsletter />
+    
+  </Fragment>
+</PageLayout>

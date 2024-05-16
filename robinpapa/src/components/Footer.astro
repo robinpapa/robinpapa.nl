@@ -1,0 +1,19 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+  <footer class="text-xs text-slate-600 px-8 py-8 staggering">
+
+  <div class="stagger-unit" style="--stagger: 10;">
+   &copy; {currentYear} superwork
+  </div>
+</footer>
+
+<style>
+  footer {
+    grid-area: footer;
+    align-items: center;
+    justify-content: center;
+  }
+
+</style>

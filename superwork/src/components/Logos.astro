@@ -1,0 +1,38 @@
+---
+
+---
+
+
+  <section id="leader" class="py-8 px-0 border border-solid border-x-0 border-t-0 border-b-1">
+    <div class="w-1/1 overflow-hidden">
+      <div class="flex flex-nowrap slider">
+        <div class="inline-block stroke-slate-500 p-8"><img src="https://cdn.sanity.io/images/4792q8os/production/b83dc7bbbe07c58a2cb4f11e2fd766ea73636d7c-226x34.svg"/></div>
+        <div class="inline-block p-8"><img src="https://cdn.sanity.io/images/4792q8os/production/b83dc7bbbe07c58a2cb4f11e2fd766ea73636d7c-226x34.svg"/></div>
+        <div class="inline-block p-8"><img src="https://cdn.sanity.io/images/4792q8os/production/b83dc7bbbe07c58a2cb4f11e2fd766ea73636d7c-226x34.svg"/></div>
+      </ul>
+    </div>
+  </section>  
+
+
+<style>
+  @keyframes infiniteSlider {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .slider {
+    overflow: hidden;
+    animation: infiniteSlider 20s linear infinite;
+  }
+
+  .slider > div {
+    display: inline-block;
+    width: 100%;
+    padding: 16px;
+    opacity: 0.5;
+  }
+</style>
