@@ -1,0 +1,1 @@
+import"./hoisted.m1JmapqD.js";const r=document.querySelectorAll("a#copyEmail");r.forEach(e=>{e.addEventListener("click",()=>{navigator.clipboard.writeText("robin@superwork.nl"),e.innerText="Emailadres gekopieerd"})});
