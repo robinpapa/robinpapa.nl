@@ -26,19 +26,26 @@ import Footer from "../components/Footer.astro";
     <GoogleFont />
   </head>
 
-  <body class="max-w-screen-sm sm:max-w-screen-xl mx-0 lg:mx-auto min-h-screen">
-    <div class="border border-solid border-x-1 rounded-b-2xl rounded-t-2xl mb-4 mt-4 p0">
-      <Header />
-      <Leader />
-      <!-- <Intro /> -->
-      <!-- <Quote /> -->
+  
+  <body>
+    <section class="bg-[#EEF0F2]">
+      <div class="max-w-screen-sm sm:max-w-screen-xl mx-0 lg:mx-auto ">
+        <Header />
+        <Leader />
+      </div> 
+    </section>
+    <section class="max-w-screen-sm sm:max-w-screen-xl mx-0 lg:mx-auto">
+      <div class="rounded-t-2xl mb-4 mt-4 p0">
+        <!-- <Intro /> -->
+        <!-- <Quote /> -->
 
-      <!-- <Logos /> -->
-      <!-- <Banner /> -->
-      <main id="main">
-        <slot name="main" />
-      </main>
-      <Footer />
-    </div>
+        <!-- <Logos /> -->
+        <!-- <Banner /> -->
+        <main id="main">
+          <slot name="main" />
+        </main>
+        <Footer />
+      </div>
+    </section>
   </body>
 </html>
