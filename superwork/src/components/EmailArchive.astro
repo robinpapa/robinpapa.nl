@@ -1,0 +1,31 @@
+---
+import { CK_API } from "src/config";
+
+const fetchEmails = async () => {
+  const response = await fetch("https://api.convertkit.com/v3/broadcasts?page=1&api_secret=" + "ja0AtOnlZSf-Fq3pijnpJYZrKrMaLfepvVmTIAVenwU");
+  const data = await response.json();
+  console.log(data)
+
+  return data.broadcasts;
+};
+
+const emails = await fetchEmails();
+
+---
+
+<html>
+  <head>
+    <title>Email Archive</title>
+  </head>
+  <body>
+    <h1>Email Archive</h1>
+    <ul>
+        {emails}
+      <!-- {emails.map((email) => (
+        <li key={email.id}>
+          <a href={email.public_url}>{email.subject}</a>
+        </li>
+      ))} -->
+    </ul>
+  </body>
+</html>

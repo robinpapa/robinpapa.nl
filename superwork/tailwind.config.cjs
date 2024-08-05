@@ -6,7 +6,7 @@ module.exports = {
     extend: {
       fontFamily: {
         body: ["Figtree", "Avenir", "Avenir Next", "sans-serif"],
-        heading: ["Figtree", "Avenir", "Avenir Next", "sans-serif"],
+        heading: ["Noto Serif", "serif"],
       },
       colors: {
         transparent: "transparent",
@@ -20,6 +20,7 @@ module.exports = {
           body: "rgb(var(--color-text-body) / <alpha-value>)",
           bold: "rgb(var(--color-text-bold) / <alpha-value>)",
           heading: "rgb(var(--color-text-heading) / <alpha-value>)",
+          highlight: "rgb(var(--color-text-highlight) / <alpha-value>)",
           muted: "rgb(var(--color-text-muted) / <alpha-value>)",
           code: "rgb(var(--color-text-code) / <alpha-value>)",
           link: "rgb(var(--color-text-link) / <alpha-value>)",

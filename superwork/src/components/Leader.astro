@@ -1,48 +1,42 @@
 ---
-let buttonText = 'Kopieer emailadres';
-
+import Card from "../components/Card.astro";
+import Newsletter from "./Newsletter.astro";
 ---
-<script>
-  // Find all buttons with the `alert` class on the page.
-  const emailCopyButton = document.querySelectorAll('a#copyEmail');
 
-  // Handle clicks on each button.
-  emailCopyButton.forEach((button) => {
-    button.addEventListener('click', () => {
-      navigator.clipboard.writeText('robin@superwork.nl');
-      (button as any).innerText = 'Emailadres gekopieerd'
-    });
-  });
-</script>
+<section id="leader" class="pb-16 px-8 lg:px-8">
+  <!-- <div class="inline-block mb-4 px-2 py-1 text-sm bg-[#e0fcf5] text-green-600 rounded-full">
+    Beschikbaar om <i>superwork</i> te leveren voor jouw organisatie
+  </div> -->
+  <!-- <div class="inline-block mb-6 px-3 py-1 text-sm bg-orange-100 text-orange-500 rounded-full">
+    Niet beschikbaar tot 01-09-2024 &mdash; maar ik bespreek graag jouw project
+  </div> -->
+  <div id="leader" class="pt-16 pb-32 w-5/5 lg:w-5/5">
+    <h2 class="">
+      <span class="inline-block">
+        Integreer bedrijfstechnologie.<br/> 
+        Creëer <span class="highlight"> klantwaarde.</span>
+      </span>
+    </h2>
+  </div>
 
-
-  <section id="leader" class="py-8 lg:pt-16 pb-24 px-8 lg:px-8">
-    <div class="inline-block mb-4 px-2 py-1 text-sm bg-[#e0fcf5] text-green-600 rounded-full">
-      Beschikbaar om <i>superwork</i> te leveren voor jouw organisatie
+  <div class="lg:flex gap-x-8 items-stretch ">
+    <div class="grow w-64">
+      <h3>Technologie inzetten voor groei?</h3>
+      <p>Ontvang dagelijks tips, resources en strategie waarmee je technologie inzet om je omzet te laten groeien.</p>
     </div>
-    <!-- <div class="inline-block mb-6 px-3 py-1 text-sm bg-orange-100 text-orange-500 rounded-full">
-      Niet beschikbaar tot 01-09-2024 &mdash; maar ik bespreek graag jouw project
-    </div> -->
-    <div class="w-5/5 lg:w-5/5">
-      <h2 class="">
-        <span class="inline-block pb-4 text-sky-950">superwork helpt bedrijven om software<br/> 
-          te<strong> integreren</strong> en <strong>automatiseren</strong>.
-        <!-- <span class="inline-block pb-8 text-sky-950"><strong>Versterk jouw innovatiepositie</strong> 
-        <br/> met slimme business technologie</span> -->
-      </h2>
-      <p class="w-3/5 pb-8 text-slate-600">
-        We ontwerpen en ontwikkelen platforms bovenop jouw applicatielandschap,<br/> waarmee we applicaties integereren en aansluiten op het bedrijfsproces.
-        <br/><br/>Zo creëren we organisationele versnelling, modernisering en innovatie.
-        <!-- Of het nou gaat om ERP, CRM, Sales, Marketing, Automatisering en Robotisering.</i> -->
-        <!-- Als software en technologie niet aansluiten op processen, dan wordt er minder aandacht geschonken aan
-        klantbeleving, innovatie en strategie. Is dat niet jammer? Laat technologie <i>voor jou</i> werken. -->
-        <!-- Doe waardevol werk. <i>En automatiseer de rest.</i> -->
-      </p>
-      <!-- <p class="pb-8 text-slate-600 text-sm">Wij implementeren tools die bij jouw organisatie passen &mdash; of het nu gaat om relatiebeheer, logistiek, marketing, sales, automatisering, robotisering of low-code.</p> -->
-      <a class="button text-sm unset px-4 py-2 mr-2 bg-sky-950 border-sky-950 hover:border-slate-900 hover:bg-slate-900 border text-slate-50 rounded-full" href="https://cal.com/superwork">Plan een kennismakingsgesprek →</a>
-      <a class="button text-sm unset px-4 py-2 bg-slate-50 border-slate-200 hover:bg-slate-100 border shadow-sm text-slate-600 rounded-full" href="mailto:robin@superwork.nl">Stuur een email</a>
-      <a id="copyEmail" class="button text-sm unset px-4 py-2 bg-slate-50 border-slate-200 hover:bg-slate-100 border shadow-sm text-slate-600 rounded-full" href="#">{buttonText}</a>
+    <div class="self-center px-8">
+      <span class="text-[64px] font-[100]">→</span>
     </div>
-  </section>
+    <div class="grow self-center">
+      <h3 class="w-full">Meld je aan.</h3>
+      <div class="">
+        <Newsletter />
+      </div>
+      <!-- <a class="button text-sm unset px-4 py-2 bg-slate-50 border-slate-200 hover:bg-slate-100 border shadow-sm text-slate-600 rounded-full" href="mailto:robin@superwork.nl">Stuur een email</a> -->
+      <!-- <a id="copyEmail" class="button text-sm unset px-4 py-2 bg-slate-50 border-slate-200 hover:bg-slate-100 border shadow-sm text-slate-600 rounded-full" href="#">{buttonText}</a> -->
+    </div>
+  </div>
+
+</section>
 
 

@@ -9,7 +9,7 @@ import Favicon from "./Favicon.astro";
 import Header from "../components/Header.astro";
 import Leader from "../components/Leader.astro";
 import Intro from "../components/Intro.astro";
-import Quote from "../components/Quote.astro";
+import Card from "../components/Card.astro";
 import Logos from "../components/Logos.astro";
 import Services from "../components/Services.astro";
 import Banner from "../components/Banner.astro";
@@ -28,18 +28,24 @@ import Footer from "../components/Footer.astro";
 
   
   <body>
-    <section class="bg-[#EEF0F2]">
+    <section class="bg-[#F2F5FA]">
       <div class="max-w-screen-sm sm:max-w-screen-xl mx-0 lg:mx-auto ">
         <Header />
         <Leader />
       </div> 
     </section>
+    <section>
+      <!-- <Logos /> -->
+    </section>
     <section class="max-w-screen-sm sm:max-w-screen-xl mx-0 lg:mx-auto">
       <div class="rounded-t-2xl mb-4 mt-4 p0">
         <!-- <Intro /> -->
-        <!-- <Quote /> -->
+        <!-- <div class="lg:columns-3">
+          <Card />
+          <Card />
+          <Card />
+        </div> -->
 
-        <!-- <Logos /> -->
         <!-- <Banner /> -->
         <main id="main">
           <slot name="main" />
